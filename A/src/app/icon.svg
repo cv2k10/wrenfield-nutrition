@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Wrenfield Nutrition wren mark">
+  <rect width="64" height="64" rx="14" fill="#2F4A3A"/>
+  <g fill="none" stroke="#FBF7F0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 42c0-9 6.4-16 15.4-16 5.5 0 9.6 2.4 12.4 5.6"/>
+    <path d="M44.8 31.6c2.6 0 4.7 1.4 5.7 3.4-2 .9-4.2.9-6.2.2"/>
+    <path d="M32.4 26c-2.8-4.6-1.6-9 2.4-12 1.4 4.6.6 8.6-2.4 12z" fill="#C4623F" stroke="#C4623F"/>
+    <path d="M22 46l-3 6"/>
+    <path d="M30 47l-1.4 6"/>
+    <path d="M17.4 42.4c-1.6 1.4-3.8 1.6-5.4.6"/>
+  </g>
+  <circle cx="39.5" cy="34" r="1.6" fill="#F2E6CF"/>
+</svg>

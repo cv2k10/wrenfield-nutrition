@@ -1,0 +1,630 @@
+<template>
+  <style>
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces-italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; }
+    @font-face { font-family: "Outfit"; src: url("assets/fonts/outfit.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; overflow: hidden; }
+
+    #root { background: transparent; }
+    #root .cap { position: absolute; left: 0; right: 0; bottom: 84px; text-align: center; opacity: 0; visibility: hidden; overflow: visible;
+      font: 800 62px/1.15 Outfit; color: #fff; -webkit-text-stroke: 9px #1F3328; paint-order: stroke fill; text-shadow: 0 6px 16px rgba(20,32,26,.45); }
+    #root .cap span { display: inline-block; margin: 0 .13em; transform-origin: 50% 70%; }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1920" data-height="1080" data-layout-allow-overflow data-layout-allow-overlap>
+      <div id="g0" class="cap"><span id="g0w0">Here's</span> <span id="g0w1">a</span> <span id="g0w2">website</span> <span id="g0w3">we</span></div>
+      <div id="g1" class="cap"><span id="g1w0">built</span> <span id="g1w1">for</span> <span id="g1w2">a</span> <span id="g1w3">nutrition</span></div>
+      <div id="g2" class="cap"><span id="g2w0">coach</span> <span id="g2w1">who</span> <span id="g2w2">helps</span> <span id="g2w3">people</span></div>
+      <div id="g3" class="cap"><span id="g3w0">on</span> <span id="g3w1">GLP-1</span> <span id="g3w2">medications.</span></div>
+      <div id="g4" class="cap"><span id="g4w0">Watch</span> <span id="g4w1">how</span> <span id="g4w2">it</span> <span id="g4w3">turns</span></div>
+      <div id="g5" class="cap"><span id="g5w0">a</span> <span id="g5w1">visitor</span> <span id="g5w2">into</span> <span id="g5w3">a</span></div>
+      <div id="g6" class="cap"><span id="g6w0">booked</span> <span id="g6w1">call.</span></div>
+      <div id="g7" class="cap"><span id="g7w0">The</span> <span id="g7w1">first</span> <span id="g7w2">screen</span> <span id="g7w3">says</span></div>
+      <div id="g8" class="cap"><span id="g8w0">exactly</span> <span id="g8w1">who</span> <span id="g8w2">it's</span> <span id="g8w3">for,</span></div>
+      <div id="g9" class="cap"><span id="g9w0">and</span> <span id="g9w1">gives</span> <span id="g9w2">two</span> <span id="g9w3">clear</span></div>
+      <div id="g10" class="cap"><span id="g10w0">next</span> <span id="g10w1">steps:</span></div>
+      <div id="g11" class="cap"><span id="g11w0">book</span> <span id="g11w1">a</span> <span id="g11w2">free</span> <span id="g11w3">call,</span></div>
+      <div id="g12" class="cap"><span id="g12w0">or</span> <span id="g12w1">take</span> <span id="g12w2">a</span> <span id="g12w3">two-minute</span></div>
+      <div id="g13" class="cap"><span id="g13w0">check.</span></div>
+      <div id="g14" class="cap"><span id="g14w0">Visitors</span> <span id="g14w1">tap</span> <span id="g14w2">the</span> <span id="g14w3">problem</span></div>
+      <div id="g15" class="cap"><span id="g15w0">that</span> <span id="g15w1">sounds</span> <span id="g15w2">like</span> <span id="g15w3">their</span></div>
+      <div id="g16" class="cap"><span id="g16w0">week,</span></div>
+      <div id="g17" class="cap"><span id="g17w0">and</span> <span id="g17w1">get</span> <span id="g17w2">a</span> <span id="g17w3">plain</span></div>
+      <div id="g18" class="cap"><span id="g18w0">answer,</span></div>
+      <div id="g19" class="cap"><span id="g19w0">plus</span> <span id="g19w1">a</span> <span id="g19w2">button</span> <span id="g19w3">to</span></div>
+      <div id="g20" class="cap"><span id="g20w0">work</span> <span id="g20w1">on</span> <span id="g20w2">it</span> <span id="g20w3">with</span></div>
+      <div id="g21" class="cap"><span id="g21w0">a</span> <span id="g21w1">coach.</span></div>
+      <div id="g22" class="cap"><span id="g22w0">The</span> <span id="g22w1">Plate</span> <span id="g22w2">Check</span> <span id="g22w3">is</span></div>
+      <div id="g23" class="cap"><span id="g23w0">the</span> <span id="g23w1">lead</span> <span id="g23w2">magnet.</span></div>
+      <div id="g24" class="cap"><span id="g24w0">Seven</span> <span id="g24w1">quick</span> <span id="g24w2">questions,</span></div>
+      <div id="g25" class="cap"><span id="g25w0">one</span> <span id="g25w1">at</span> <span id="g25w2">a</span> <span id="g25w3">time.</span></div>
+      <div id="g26" class="cap"><span id="g26w0">Every</span> <span id="g26w1">visitor</span> <span id="g26w2">gets</span> <span id="g26w3">a</span></div>
+      <div id="g27" class="cap"><span id="g27w0">score,</span></div>
+      <div id="g28" class="cap"><span id="g28w0">their</span></div>
+      <div id="g29" class="cap"><span id="g29w0">three</span> <span id="g29w1">weakest</span> <span id="g29w2">areas,</span></div>
+      <div id="g30" class="cap"><span id="g30w0">and</span> <span id="g30w1">the</span> <span id="g30w2">plan</span> <span id="g30w3">that</span></div>
+      <div id="g31" class="cap"><span id="g31w0">fits.</span></div>
+      <div id="g32" class="cap"><span id="g32w0">One</span> <span id="g32w1">button</span> <span id="g32w2">carries</span> <span id="g32w3">all</span></div>
+      <div id="g33" class="cap"><span id="g33w0">of</span> <span id="g33w1">it</span> <span id="g33w2">into</span> <span id="g33w3">the</span></div>
+      <div id="g34" class="cap"><span id="g34w0">booking</span> <span id="g34w1">form.</span></div>
+      <div id="g35" class="cap"><span id="g35w0">Then</span> <span id="g35w1">it</span> <span id="g35w2">builds</span> <span id="g35w3">trust,</span></div>
+      <div id="g36" class="cap"><span id="g36w0">by</span> <span id="g36w1">naming</span> <span id="g36w2">the</span> <span id="g36w3">red</span></div>
+      <div id="g37" class="cap"><span id="g37w0">flags</span> <span id="g37w1">this</span> <span id="g37w2">coach</span> <span id="g37w3">will</span></div>
+      <div id="g38" class="cap"><span id="g38w0">never</span> <span id="g38w1">sell.</span></div>
+      <div id="g39" class="cap"><span id="g39w0">Four</span> <span id="g39w1">simple</span> <span id="g39w2">steps</span> <span id="g39w3">show</span></div>
+      <div id="g40" class="cap"><span id="g40w0">what</span> <span id="g40w1">happens</span> <span id="g40w2">after</span> <span id="g40w3">the</span></div>
+      <div id="g41" class="cap"><span id="g41w0">call.</span></div>
+      <div id="g42" class="cap"><span id="g42w0">Prices</span></div>
+      <div id="g43" class="cap"><span id="g43w0">sit</span> <span id="g43w1">right</span> <span id="g43w2">on</span> <span id="g43w3">the</span></div>
+      <div id="g44" class="cap"><span id="g44w0">page,</span></div>
+      <div id="g45" class="cap"><span id="g45w0">and</span> <span id="g45w1">each</span> <span id="g45w2">plan</span> <span id="g45w3">opens</span></div>
+      <div id="g46" class="cap"><span id="g46w0">a</span> <span id="g46w1">week-by-week</span> <span id="g46w2">outline,</span></div>
+      <div id="g47" class="cap"><span id="g47w0">with</span> <span id="g47w1">its</span> <span id="g47w2">own</span> <span id="g47w3">booking</span></div>
+      <div id="g48" class="cap"><span id="g48w0">button.</span></div>
+      <div id="g49" class="cap"><span id="g49w0">Visitors</span> <span id="g49w1">see</span> <span id="g49w2">what</span> <span id="g49w3">they'll</span></div>
+      <div id="g50" class="cap"><span id="g50w0">take</span> <span id="g50w1">home,</span></div>
+      <div id="g51" class="cap"><span id="g51w0">and</span> <span id="g51w1">meet</span> <span id="g51w2">the</span> <span id="g51w3">coach.</span></div>
+      <div id="g52" class="cap"><span id="g52w0">Not</span> <span id="g52w1">ready</span> <span id="g52w2">to</span> <span id="g52w3">book?</span></div>
+      <div id="g53" class="cap"><span id="g53w0">A</span> <span id="g53w1">free</span> <span id="g53w2">protein</span> <span id="g53w3">guide</span></div>
+      <div id="g54" class="cap"><span id="g54w0">still</span> <span id="g54w1">captures</span> <span id="g54w2">their</span> <span id="g54w3">name</span></div>
+      <div id="g55" class="cap"><span id="g55w0">and</span> <span id="g55w1">email.</span></div>
+      <div id="g56" class="cap"><span id="g56w0">Straight</span> <span id="g56w1">answers</span> <span id="g56w2">clear</span> <span id="g56w3">up</span></div>
+      <div id="g57" class="cap"><span id="g57w0">the</span> <span id="g57w1">last</span> <span id="g57w2">doubts.</span></div>
+      <div id="g58" class="cap"><span id="g58w0">And</span> <span id="g58w1">every</span> <span id="g58w2">path</span> <span id="g58w3">leads</span></div>
+      <div id="g59" class="cap"><span id="g59w0">to</span> <span id="g59w1">one</span> <span id="g59w2">short</span> <span id="g59w3">booking</span></div>
+      <div id="g60" class="cap"><span id="g60w0">form.</span></div>
+      <div id="g61" class="cap"><span id="g61w0">Step</span> <span id="g61w1">one:</span></div>
+      <div id="g62" class="cap"><span id="g62w0">where</span></div>
+      <div id="g63" class="cap"><span id="g63w0">they</span> <span id="g63w1">are,</span></div>
+      <div id="g64" class="cap"><span id="g64w0">and</span> <span id="g64w1">their</span> <span id="g64w2">main</span> <span id="g64w3">concern.</span></div>
+      <div id="g65" class="cap"><span id="g65w0">Skip</span> <span id="g65w1">something,</span></div>
+      <div id="g66" class="cap"><span id="g66w0">and</span> <span id="g66w1">it</span> <span id="g66w2">points</span> <span id="g66w3">to</span></div>
+      <div id="g67" class="cap"><span id="g67w0">exactly</span> <span id="g67w1">what's</span> <span id="g67w2">missing.</span></div>
+      <div id="g68" class="cap"><span id="g68w0">Step</span> <span id="g68w1">two:</span></div>
+      <div id="g69" class="cap"><span id="g69w0">their</span> <span id="g69w1">goals,</span></div>
+      <div id="g70" class="cap"><span id="g70w0">in</span> <span id="g70w1">a</span> <span id="g70w2">few</span> <span id="g70w3">taps.</span></div>
+      <div id="g71" class="cap"><span id="g71w0">Step</span> <span id="g71w1">three:</span></div>
+      <div id="g72" class="cap"><span id="g72w0">contact</span> <span id="g72w1">details,</span></div>
+      <div id="g73" class="cap"><span id="g73w0">and</span> <span id="g73w1">the</span> <span id="g73w2">best</span> <span id="g73w3">time</span></div>
+      <div id="g74" class="cap"><span id="g74w0">to</span> <span id="g74w1">talk.</span></div>
+      <div id="g75" class="cap"><span id="g75w0">Then</span> <span id="g75w1">a</span> <span id="g75w2">review</span> <span id="g75w3">screen,</span></div>
+      <div id="g76" class="cap"><span id="g76w0">with</span> <span id="g76w1">their</span> <span id="g76w2">Plate</span> <span id="g76w3">Check</span></div>
+      <div id="g77" class="cap"><span id="g77w0">score</span> <span id="g77w1">already</span> <span id="g77w2">attached.</span></div>
+      <div id="g78" class="cap"><span id="g78w0">One</span> <span id="g78w1">click,</span></div>
+      <div id="g79" class="cap"><span id="g79w0">and</span> <span id="g79w1">the</span> <span id="g79w2">request</span> <span id="g79w3">is</span></div>
+      <div id="g80" class="cap"><span id="g80w0">in,</span></div>
+      <div id="g81" class="cap"><span id="g81w0">with</span> <span id="g81w1">clear</span> <span id="g81w2">next</span> <span id="g81w3">steps.</span></div>
+      <div id="g82" class="cap"><span id="g82w0">Want</span> <span id="g82w1">a</span> <span id="g82w2">website</span> <span id="g82w3">that</span></div>
+      <div id="g83" class="cap"><span id="g83w0">turns</span> <span id="g83w1">visitors</span> <span id="g83w2">into</span> <span id="g83w3">booked</span></div>
+      <div id="g84" class="cap"><span id="g84w0">calls?</span></div>
+      <div id="g85" class="cap"><span id="g85w0">Talk</span> <span id="g85w1">to</span> <span id="g85w2">Delta</span></div>
+      <div id="g86" class="cap"><span id="g86w0">Web.</span></div>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+tl.set("#g0",{opacity:1,visibility:"visible"},0.65);
+tl.fromTo("#g0",{y:14},{y:0,duration:.18,ease:"power2.out"},0.65);
+tl.set("#g0w0",{color:"#FFC48A",scale:1.1},0.7);tl.set("#g0w0",{color:"#FFFFFF",scale:1},1.1);
+tl.set("#g0w1",{color:"#FFC48A",scale:1.1},1.1);tl.set("#g0w1",{color:"#FFFFFF",scale:1},1.18);
+tl.set("#g0w2",{color:"#FFC48A",scale:1.1},1.18);tl.set("#g0w2",{color:"#FFFFFF",scale:1},1.66);
+tl.set("#g0w3",{color:"#FFC48A",scale:1.1},1.66);tl.set("#g0w3",{color:"#FFFFFF",scale:1},1.75);
+tl.set("#g0",{opacity:0,visibility:"hidden"},1.75);
+tl.set("#g1",{opacity:1,visibility:"visible"},1.77);
+tl.fromTo("#g1",{y:14},{y:0,duration:.18,ease:"power2.out"},1.77);
+tl.set("#g1w0",{color:"#FFC48A",scale:1.1},1.82);tl.set("#g1w0",{color:"#FFFFFF",scale:1},2.06);
+tl.set("#g1w1",{color:"#FFC48A",scale:1.1},2.06);tl.set("#g1w1",{color:"#FFFFFF",scale:1},2.22);
+tl.set("#g1w2",{color:"#FFC48A",scale:1.1},2.22);tl.set("#g1w2",{color:"#FFFFFF",scale:1},2.38);
+tl.set("#g1w3",{color:"#FFC48A",scale:1.1},2.38);tl.set("#g1w3",{color:"#FFFFFF",scale:1},2.87);
+tl.set("#g1",{opacity:0,visibility:"hidden"},2.87);
+tl.set("#g2",{opacity:1,visibility:"visible"},2.89);
+tl.fromTo("#g2",{y:14},{y:0,duration:.18,ease:"power2.out"},2.89);
+tl.set("#g2w0",{color:"#FFC48A",scale:1.1},2.94);tl.set("#g2w0",{color:"#FFFFFF",scale:1},3.34);
+tl.set("#g2w1",{color:"#FFC48A",scale:1.1},3.34);tl.set("#g2w1",{color:"#FFFFFF",scale:1},3.58);
+tl.set("#g2w2",{color:"#FFC48A",scale:1.1},3.58);tl.set("#g2w2",{color:"#FFFFFF",scale:1},3.98);
+tl.set("#g2w3",{color:"#FFC48A",scale:1.1},3.98);tl.set("#g2w3",{color:"#FFFFFF",scale:1},4.15);
+tl.set("#g2",{opacity:0,visibility:"hidden"},4.15);
+tl.set("#g3",{opacity:1,visibility:"visible"},4.17);
+tl.fromTo("#g3",{y:14},{y:0,duration:.18,ease:"power2.out"},4.17);
+tl.set("#g3w0",{color:"#FFC48A",scale:1.1},4.22);tl.set("#g3w0",{color:"#FFFFFF",scale:1},4.46);
+tl.set("#g3w1",{color:"#FFC48A",scale:1.1},4.46);tl.set("#g3w1",{color:"#FFFFFF",scale:1},5.34);
+tl.set("#g3w2",{color:"#FFC48A",scale:1.1},5.42);tl.set("#g3w2",{color:"#FFFFFF",scale:1},5.75);
+tl.set("#g3",{opacity:0,visibility:"hidden"},5.75);
+tl.set("#g4",{opacity:1,visibility:"visible"},5.77);
+tl.fromTo("#g4",{y:14},{y:0,duration:.18,ease:"power2.out"},5.77);
+tl.set("#g4w0",{color:"#FFC48A",scale:1.1},5.82);tl.set("#g4w0",{color:"#FFFFFF",scale:1},6.86);
+tl.set("#g4w1",{color:"#FFC48A",scale:1.1},6.86);tl.set("#g4w1",{color:"#FFFFFF",scale:1},7.5);
+tl.set("#g4w2",{color:"#FFC48A",scale:1.1},7.5);tl.set("#g4w2",{color:"#FFFFFF",scale:1},7.66);
+tl.set("#g4w3",{color:"#FFC48A",scale:1.1},7.66);tl.set("#g4w3",{color:"#FFFFFF",scale:1},7.91);
+tl.set("#g4",{opacity:0,visibility:"hidden"},7.91);
+tl.set("#g5",{opacity:1,visibility:"visible"},7.93);
+tl.fromTo("#g5",{y:14},{y:0,duration:.18,ease:"power2.out"},7.93);
+tl.set("#g5w0",{color:"#FFC48A",scale:1.1},7.98);tl.set("#g5w0",{color:"#FFFFFF",scale:1},8.06);
+tl.set("#g5w1",{color:"#FFC48A",scale:1.1},8.06);tl.set("#g5w1",{color:"#FFFFFF",scale:1},8.46);
+tl.set("#g5w2",{color:"#FFC48A",scale:1.1},8.46);tl.set("#g5w2",{color:"#FFFFFF",scale:1},8.7);
+tl.set("#g5w3",{color:"#FFC48A",scale:1.1},8.7);tl.set("#g5w3",{color:"#FFFFFF",scale:1},8.71);
+tl.set("#g5",{opacity:0,visibility:"hidden"},8.71);
+tl.set("#g6",{opacity:1,visibility:"visible"},8.73);
+tl.fromTo("#g6",{y:14},{y:0,duration:.18,ease:"power2.out"},8.73);
+tl.set("#g6w0",{color:"#FFC48A",scale:1.1},8.78);tl.set("#g6w0",{color:"#FFFFFF",scale:1},9.18);
+tl.set("#g6w1",{color:"#FFC48A",scale:1.1},9.18);tl.set("#g6w1",{color:"#FFFFFF",scale:1},9.66);
+tl.set("#g6",{opacity:0,visibility:"hidden"},9.78);
+tl.set("#g7",{opacity:1,visibility:"visible"},10.35);
+tl.fromTo("#g7",{y:14},{y:0,duration:.18,ease:"power2.out"},10.35);
+tl.set("#g7w0",{color:"#FFC48A",scale:1.1},10.4);tl.set("#g7w0",{color:"#FFFFFF",scale:1},10.56);
+tl.set("#g7w1",{color:"#FFC48A",scale:1.1},10.56);tl.set("#g7w1",{color:"#FFFFFF",scale:1},10.88);
+tl.set("#g7w2",{color:"#FFC48A",scale:1.1},10.88);tl.set("#g7w2",{color:"#FFFFFF",scale:1},11.2);
+tl.set("#g7w3",{color:"#FFC48A",scale:1.1},11.2);tl.set("#g7w3",{color:"#FFFFFF",scale:1},11.45);
+tl.set("#g7",{opacity:0,visibility:"hidden"},11.45);
+tl.set("#g8",{opacity:1,visibility:"visible"},11.47);
+tl.fromTo("#g8",{y:14},{y:0,duration:.18,ease:"power2.out"},11.47);
+tl.set("#g8w0",{color:"#FFC48A",scale:1.1},11.52);tl.set("#g8w0",{color:"#FFFFFF",scale:1},11.92);
+tl.set("#g8w1",{color:"#FFC48A",scale:1.1},11.92);tl.set("#g8w1",{color:"#FFFFFF",scale:1},12.16);
+tl.set("#g8w2",{color:"#FFC48A",scale:1.1},12.16);tl.set("#g8w2",{color:"#FFFFFF",scale:1},12.48);
+tl.set("#g8w3",{color:"#FFC48A",scale:1.1},12.48);tl.set("#g8w3",{color:"#FFFFFF",scale:1},12.64);
+tl.set("#g8",{opacity:0,visibility:"hidden"},12.65);
+tl.set("#g9",{opacity:1,visibility:"visible"},12.67);
+tl.fromTo("#g9",{y:14},{y:0,duration:.18,ease:"power2.out"},12.67);
+tl.set("#g9w0",{color:"#FFC48A",scale:1.1},12.72);tl.set("#g9w0",{color:"#FFFFFF",scale:1},12.96);
+tl.set("#g9w1",{color:"#FFC48A",scale:1.1},12.96);tl.set("#g9w1",{color:"#FFFFFF",scale:1},13.2);
+tl.set("#g9w2",{color:"#FFC48A",scale:1.1},13.2);tl.set("#g9w2",{color:"#FFFFFF",scale:1},13.44);
+tl.set("#g9w3",{color:"#FFC48A",scale:1.1},13.44);tl.set("#g9w3",{color:"#FFFFFF",scale:1},13.77);
+tl.set("#g9",{opacity:0,visibility:"hidden"},13.77);
+tl.set("#g10",{opacity:1,visibility:"visible"},13.79);
+tl.fromTo("#g10",{y:14},{y:0,duration:.18,ease:"power2.out"},13.79);
+tl.set("#g10w0",{color:"#FFC48A",scale:1.1},13.84);tl.set("#g10w0",{color:"#FFFFFF",scale:1},14.24);
+tl.set("#g10w1",{color:"#FFC48A",scale:1.1},14.24);tl.set("#g10w1",{color:"#FFFFFF",scale:1},14.97);
+tl.set("#g10",{opacity:0,visibility:"hidden"},14.97);
+tl.set("#g11",{opacity:1,visibility:"visible"},14.99);
+tl.fromTo("#g11",{y:14},{y:0,duration:.18,ease:"power2.out"},14.99);
+tl.set("#g11w0",{color:"#FFC48A",scale:1.1},15.04);tl.set("#g11w0",{color:"#FFFFFF",scale:1},15.36);
+tl.set("#g11w1",{color:"#FFC48A",scale:1.1},15.36);tl.set("#g11w1",{color:"#FFFFFF",scale:1},15.44);
+tl.set("#g11w2",{color:"#FFC48A",scale:1.1},15.44);tl.set("#g11w2",{color:"#FFFFFF",scale:1},15.76);
+tl.set("#g11w3",{color:"#FFC48A",scale:1.1},15.76);tl.set("#g11w3",{color:"#FFFFFF",scale:1},16);
+tl.set("#g11",{opacity:0,visibility:"hidden"},16.09);
+tl.set("#g12",{opacity:1,visibility:"visible"},16.11);
+tl.fromTo("#g12",{y:14},{y:0,duration:.18,ease:"power2.out"},16.11);
+tl.set("#g12w0",{color:"#FFC48A",scale:1.1},16.16);tl.set("#g12w0",{color:"#FFFFFF",scale:1},16.32);
+tl.set("#g12w1",{color:"#FFC48A",scale:1.1},16.32);tl.set("#g12w1",{color:"#FFFFFF",scale:1},16.56);
+tl.set("#g12w2",{color:"#FFC48A",scale:1.1},16.56);tl.set("#g12w2",{color:"#FFFFFF",scale:1},16.72);
+tl.set("#g12w3",{color:"#FFC48A",scale:1.1},16.72);tl.set("#g12w3",{color:"#FFFFFF",scale:1},17.21);
+tl.set("#g12",{opacity:0,visibility:"hidden"},17.21);
+tl.set("#g13",{opacity:1,visibility:"visible"},17.23);
+tl.fromTo("#g13",{y:14},{y:0,duration:.18,ease:"power2.out"},17.23);
+tl.set("#g13w0",{color:"#FFC48A",scale:1.1},17.28);tl.set("#g13w0",{color:"#FFFFFF",scale:1},17.68);
+tl.set("#g13",{opacity:0,visibility:"hidden"},17.8);
+tl.set("#g14",{opacity:1,visibility:"visible"},19.26);
+tl.fromTo("#g14",{y:14},{y:0,duration:.18,ease:"power2.out"},19.26);
+tl.set("#g14w0",{color:"#FFC48A",scale:1.1},19.31);tl.set("#g14w0",{color:"#FFFFFF",scale:1},19.95);
+tl.set("#g14w1",{color:"#FFC48A",scale:1.1},19.95);tl.set("#g14w1",{color:"#FFFFFF",scale:1},20.27);
+tl.set("#g14w2",{color:"#FFC48A",scale:1.1},20.27);tl.set("#g14w2",{color:"#FFFFFF",scale:1},20.43);
+tl.set("#g14w3",{color:"#FFC48A",scale:1.1},20.43);tl.set("#g14w3",{color:"#FFFFFF",scale:1},20.68);
+tl.set("#g14",{opacity:0,visibility:"hidden"},20.68);
+tl.set("#g15",{opacity:1,visibility:"visible"},20.7);
+tl.fromTo("#g15",{y:14},{y:0,duration:.18,ease:"power2.out"},20.7);
+tl.set("#g15w0",{color:"#FFC48A",scale:1.1},20.75);tl.set("#g15w0",{color:"#FFFFFF",scale:1},20.99);
+tl.set("#g15w1",{color:"#FFC48A",scale:1.1},20.99);tl.set("#g15w1",{color:"#FFFFFF",scale:1},21.39);
+tl.set("#g15w2",{color:"#FFC48A",scale:1.1},21.39);tl.set("#g15w2",{color:"#FFFFFF",scale:1},21.55);
+tl.set("#g15w3",{color:"#FFC48A",scale:1.1},21.55);tl.set("#g15w3",{color:"#FFFFFF",scale:1},21.88);
+tl.set("#g15",{opacity:0,visibility:"hidden"},21.88);
+tl.set("#g16",{opacity:1,visibility:"visible"},21.9);
+tl.fromTo("#g16",{y:14},{y:0,duration:.18,ease:"power2.out"},21.9);
+tl.set("#g16w0",{color:"#FFC48A",scale:1.1},21.95);tl.set("#g16w0",{color:"#FFFFFF",scale:1},22.35);
+tl.set("#g16",{opacity:0,visibility:"hidden"},22.36);
+tl.set("#g17",{opacity:1,visibility:"visible"},22.38);
+tl.fromTo("#g17",{y:14},{y:0,duration:.18,ease:"power2.out"},22.38);
+tl.set("#g17w0",{color:"#FFC48A",scale:1.1},22.43);tl.set("#g17w0",{color:"#FFFFFF",scale:1},22.67);
+tl.set("#g17w1",{color:"#FFC48A",scale:1.1},22.67);tl.set("#g17w1",{color:"#FFFFFF",scale:1},22.91);
+tl.set("#g17w2",{color:"#FFC48A",scale:1.1},22.91);tl.set("#g17w2",{color:"#FFFFFF",scale:1},22.99);
+tl.set("#g17w3",{color:"#FFC48A",scale:1.1},22.99);tl.set("#g17w3",{color:"#FFFFFF",scale:1},23.4);
+tl.set("#g17",{opacity:0,visibility:"hidden"},23.4);
+tl.set("#g18",{opacity:1,visibility:"visible"},23.42);
+tl.fromTo("#g18",{y:14},{y:0,duration:.18,ease:"power2.out"},23.42);
+tl.set("#g18w0",{color:"#FFC48A",scale:1.1},23.47);tl.set("#g18w0",{color:"#FFFFFF",scale:1},24.04);
+tl.set("#g18",{opacity:0,visibility:"hidden"},24.04);
+tl.set("#g19",{opacity:1,visibility:"visible"},24.06);
+tl.fromTo("#g19",{y:14},{y:0,duration:.18,ease:"power2.out"},24.06);
+tl.set("#g19w0",{color:"#FFC48A",scale:1.1},24.11);tl.set("#g19w0",{color:"#FFFFFF",scale:1},24.43);
+tl.set("#g19w1",{color:"#FFC48A",scale:1.1},24.43);tl.set("#g19w1",{color:"#FFFFFF",scale:1},24.51);
+tl.set("#g19w2",{color:"#FFC48A",scale:1.1},24.51);tl.set("#g19w2",{color:"#FFFFFF",scale:1},24.91);
+tl.set("#g19w3",{color:"#FFC48A",scale:1.1},24.91);tl.set("#g19w3",{color:"#FFFFFF",scale:1},25);
+tl.set("#g19",{opacity:0,visibility:"hidden"},25);
+tl.set("#g20",{opacity:1,visibility:"visible"},25.02);
+tl.fromTo("#g20",{y:14},{y:0,duration:.18,ease:"power2.out"},25.02);
+tl.set("#g20w0",{color:"#FFC48A",scale:1.1},25.07);tl.set("#g20w0",{color:"#FFFFFF",scale:1},25.31);
+tl.set("#g20w1",{color:"#FFC48A",scale:1.1},25.31);tl.set("#g20w1",{color:"#FFFFFF",scale:1},25.47);
+tl.set("#g20w2",{color:"#FFC48A",scale:1.1},25.47);tl.set("#g20w2",{color:"#FFFFFF",scale:1},25.63);
+tl.set("#g20w3",{color:"#FFC48A",scale:1.1},25.63);tl.set("#g20w3",{color:"#FFFFFF",scale:1},25.72);
+tl.set("#g20",{opacity:0,visibility:"hidden"},25.72);
+tl.set("#g21",{opacity:1,visibility:"visible"},25.74);
+tl.fromTo("#g21",{y:14},{y:0,duration:.18,ease:"power2.out"},25.74);
+tl.set("#g21w0",{color:"#FFC48A",scale:1.1},25.79);tl.set("#g21w0",{color:"#FFFFFF",scale:1},25.87);
+tl.set("#g21w1",{color:"#FFC48A",scale:1.1},25.87);tl.set("#g21w1",{color:"#FFFFFF",scale:1},26.35);
+tl.set("#g21",{opacity:0,visibility:"hidden"},26.47);
+tl.set("#g22",{opacity:1,visibility:"visible"},27.92);
+tl.fromTo("#g22",{y:14},{y:0,duration:.18,ease:"power2.out"},27.92);
+tl.set("#g22w0",{color:"#FFC48A",scale:1.1},27.97);tl.set("#g22w0",{color:"#FFFFFF",scale:1},28.13);
+tl.set("#g22w1",{color:"#FFC48A",scale:1.1},28.13);tl.set("#g22w1",{color:"#FFFFFF",scale:1},28.45);
+tl.set("#g22w2",{color:"#FFC48A",scale:1.1},28.45);tl.set("#g22w2",{color:"#FFFFFF",scale:1},28.77);
+tl.set("#g22w3",{color:"#FFC48A",scale:1.1},28.77);tl.set("#g22w3",{color:"#FFFFFF",scale:1},28.86);
+tl.set("#g22",{opacity:0,visibility:"hidden"},28.86);
+tl.set("#g23",{opacity:1,visibility:"visible"},28.88);
+tl.fromTo("#g23",{y:14},{y:0,duration:.18,ease:"power2.out"},28.88);
+tl.set("#g23w0",{color:"#FFC48A",scale:1.1},28.93);tl.set("#g23w0",{color:"#FFFFFF",scale:1},29.01);
+tl.set("#g23w1",{color:"#FFC48A",scale:1.1},29.01);tl.set("#g23w1",{color:"#FFFFFF",scale:1},29.41);
+tl.set("#g23w2",{color:"#FFC48A",scale:1.1},29.41);tl.set("#g23w2",{color:"#FFFFFF",scale:1},30.06);
+tl.set("#g23",{opacity:0,visibility:"hidden"},30.06);
+tl.set("#g24",{opacity:1,visibility:"visible"},30.08);
+tl.fromTo("#g24",{y:14},{y:0,duration:.18,ease:"power2.out"},30.08);
+tl.set("#g24w0",{color:"#FFC48A",scale:1.1},30.13);tl.set("#g24w0",{color:"#FFFFFF",scale:1},30.53);
+tl.set("#g24w1",{color:"#FFC48A",scale:1.1},30.53);tl.set("#g24w1",{color:"#FFFFFF",scale:1},30.93);
+tl.set("#g24w2",{color:"#FFC48A",scale:1.1},30.93);tl.set("#g24w2",{color:"#FFFFFF",scale:1},31.5);
+tl.set("#g24",{opacity:0,visibility:"hidden"},31.5);
+tl.set("#g25",{opacity:1,visibility:"visible"},31.52);
+tl.fromTo("#g25",{y:14},{y:0,duration:.18,ease:"power2.out"},31.52);
+tl.set("#g25w0",{color:"#FFC48A",scale:1.1},31.57);tl.set("#g25w0",{color:"#FFFFFF",scale:1},31.81);
+tl.set("#g25w1",{color:"#FFC48A",scale:1.1},31.81);tl.set("#g25w1",{color:"#FFFFFF",scale:1},32.05);
+tl.set("#g25w2",{color:"#FFC48A",scale:1.1},32.05);tl.set("#g25w2",{color:"#FFFFFF",scale:1},32.21);
+tl.set("#g25w3",{color:"#FFC48A",scale:1.1},32.21);tl.set("#g25w3",{color:"#FFFFFF",scale:1},32.53);
+tl.set("#g25",{opacity:0,visibility:"hidden"},32.65);
+tl.set("#g26",{opacity:1,visibility:"visible"},33.74);
+tl.fromTo("#g26",{y:14},{y:0,duration:.18,ease:"power2.out"},33.74);
+tl.set("#g26w0",{color:"#FFC48A",scale:1.1},33.79);tl.set("#g26w0",{color:"#FFFFFF",scale:1},34.11);
+tl.set("#g26w1",{color:"#FFC48A",scale:1.1},34.11);tl.set("#g26w1",{color:"#FFFFFF",scale:1},34.59);
+tl.set("#g26w2",{color:"#FFC48A",scale:1.1},34.59);tl.set("#g26w2",{color:"#FFFFFF",scale:1},34.83);
+tl.set("#g26w3",{color:"#FFC48A",scale:1.1},34.83);tl.set("#g26w3",{color:"#FFFFFF",scale:1},34.92);
+tl.set("#g26",{opacity:0,visibility:"hidden"},34.92);
+tl.set("#g27",{opacity:1,visibility:"visible"},34.94);
+tl.fromTo("#g27",{y:14},{y:0,duration:.18,ease:"power2.out"},34.94);
+tl.set("#g27w0",{color:"#FFC48A",scale:1.1},34.99);tl.set("#g27w0",{color:"#FFFFFF",scale:1},35.48);
+tl.set("#g27",{opacity:0,visibility:"hidden"},35.48);
+tl.set("#g28",{opacity:1,visibility:"visible"},35.5);
+tl.fromTo("#g28",{y:14},{y:0,duration:.18,ease:"power2.out"},35.5);
+tl.set("#g28w0",{color:"#FFC48A",scale:1.1},35.55);tl.set("#g28w0",{color:"#FFFFFF",scale:1},35.79);
+tl.set("#g28",{opacity:0,visibility:"hidden"},35.88);
+tl.set("#g29",{opacity:1,visibility:"visible"},35.9);
+tl.fromTo("#g29",{y:14},{y:0,duration:.18,ease:"power2.out"},35.9);
+tl.set("#g29w0",{color:"#FFC48A",scale:1.1},35.95);tl.set("#g29w0",{color:"#FFFFFF",scale:1},36.27);
+tl.set("#g29w1",{color:"#FFC48A",scale:1.1},36.27);tl.set("#g29w1",{color:"#FFFFFF",scale:1},36.83);
+tl.set("#g29w2",{color:"#FFC48A",scale:1.1},36.83);tl.set("#g29w2",{color:"#FFFFFF",scale:1},37.4);
+tl.set("#g29",{opacity:0,visibility:"hidden"},37.4);
+tl.set("#g30",{opacity:1,visibility:"visible"},37.42);
+tl.fromTo("#g30",{y:14},{y:0,duration:.18,ease:"power2.out"},37.42);
+tl.set("#g30w0",{color:"#FFC48A",scale:1.1},37.47);tl.set("#g30w0",{color:"#FFFFFF",scale:1},37.63);
+tl.set("#g30w1",{color:"#FFC48A",scale:1.1},37.63);tl.set("#g30w1",{color:"#FFFFFF",scale:1},37.87);
+tl.set("#g30w2",{color:"#FFC48A",scale:1.1},37.87);tl.set("#g30w2",{color:"#FFFFFF",scale:1},38.19);
+tl.set("#g30w3",{color:"#FFC48A",scale:1.1},38.19);tl.set("#g30w3",{color:"#FFFFFF",scale:1},38.44);
+tl.set("#g30",{opacity:0,visibility:"hidden"},38.44);
+tl.set("#g31",{opacity:1,visibility:"visible"},38.46);
+tl.fromTo("#g31",{y:14},{y:0,duration:.18,ease:"power2.out"},38.46);
+tl.set("#g31w0",{color:"#FFC48A",scale:1.1},38.51);tl.set("#g31w0",{color:"#FFFFFF",scale:1},39.24);
+tl.set("#g31",{opacity:0,visibility:"hidden"},39.24);
+tl.set("#g32",{opacity:1,visibility:"visible"},39.26);
+tl.fromTo("#g32",{y:14},{y:0,duration:.18,ease:"power2.out"},39.26);
+tl.set("#g32w0",{color:"#FFC48A",scale:1.1},39.31);tl.set("#g32w0",{color:"#FFFFFF",scale:1},39.63);
+tl.set("#g32w1",{color:"#FFC48A",scale:1.1},39.63);tl.set("#g32w1",{color:"#FFFFFF",scale:1},40.11);
+tl.set("#g32w2",{color:"#FFC48A",scale:1.1},40.11);tl.set("#g32w2",{color:"#FFFFFF",scale:1},40.51);
+tl.set("#g32w3",{color:"#FFC48A",scale:1.1},40.51);tl.set("#g32w3",{color:"#FFFFFF",scale:1},40.68);
+tl.set("#g32",{opacity:0,visibility:"hidden"},40.68);
+tl.set("#g33",{opacity:1,visibility:"visible"},40.7);
+tl.fromTo("#g33",{y:14},{y:0,duration:.18,ease:"power2.out"},40.7);
+tl.set("#g33w0",{color:"#FFC48A",scale:1.1},40.75);tl.set("#g33w0",{color:"#FFFFFF",scale:1},40.83);
+tl.set("#g33w1",{color:"#FFC48A",scale:1.1},40.83);tl.set("#g33w1",{color:"#FFFFFF",scale:1},40.99);
+tl.set("#g33w2",{color:"#FFC48A",scale:1.1},40.99);tl.set("#g33w2",{color:"#FFFFFF",scale:1},41.15);
+tl.set("#g33w3",{color:"#FFC48A",scale:1.1},41.15);tl.set("#g33w3",{color:"#FFFFFF",scale:1},41.24);
+tl.set("#g33",{opacity:0,visibility:"hidden"},41.24);
+tl.set("#g34",{opacity:1,visibility:"visible"},41.26);
+tl.fromTo("#g34",{y:14},{y:0,duration:.18,ease:"power2.out"},41.26);
+tl.set("#g34w0",{color:"#FFC48A",scale:1.1},41.31);tl.set("#g34w0",{color:"#FFFFFF",scale:1},41.71);
+tl.set("#g34w1",{color:"#FFC48A",scale:1.1},41.71);tl.set("#g34w1",{color:"#FFFFFF",scale:1},42.03);
+tl.set("#g34",{opacity:0,visibility:"hidden"},42.15);
+tl.set("#g35",{opacity:1,visibility:"visible"},43.8);
+tl.fromTo("#g35",{y:14},{y:0,duration:.18,ease:"power2.out"},43.8);
+tl.set("#g35w0",{color:"#FFC48A",scale:1.1},43.85);tl.set("#g35w0",{color:"#FFFFFF",scale:1},44.09);
+tl.set("#g35w1",{color:"#FFC48A",scale:1.1},44.09);tl.set("#g35w1",{color:"#FFFFFF",scale:1},44.25);
+tl.set("#g35w2",{color:"#FFC48A",scale:1.1},44.25);tl.set("#g35w2",{color:"#FFFFFF",scale:1},44.65);
+tl.set("#g35w3",{color:"#FFC48A",scale:1.1},44.65);tl.set("#g35w3",{color:"#FFFFFF",scale:1},45.05);
+tl.set("#g35",{opacity:0,visibility:"hidden"},45.06);
+tl.set("#g36",{opacity:1,visibility:"visible"},45.08);
+tl.fromTo("#g36",{y:14},{y:0,duration:.18,ease:"power2.out"},45.08);
+tl.set("#g36w0",{color:"#FFC48A",scale:1.1},45.13);tl.set("#g36w0",{color:"#FFFFFF",scale:1},45.37);
+tl.set("#g36w1",{color:"#FFC48A",scale:1.1},45.37);tl.set("#g36w1",{color:"#FFFFFF",scale:1},45.77);
+tl.set("#g36w2",{color:"#FFC48A",scale:1.1},45.77);tl.set("#g36w2",{color:"#FFFFFF",scale:1},45.93);
+tl.set("#g36w3",{color:"#FFC48A",scale:1.1},45.93);tl.set("#g36w3",{color:"#FFFFFF",scale:1},46.1);
+tl.set("#g36",{opacity:0,visibility:"hidden"},46.1);
+tl.set("#g37",{opacity:1,visibility:"visible"},46.12);
+tl.fromTo("#g37",{y:14},{y:0,duration:.18,ease:"power2.out"},46.12);
+tl.set("#g37w0",{color:"#FFC48A",scale:1.1},46.17);tl.set("#g37w0",{color:"#FFFFFF",scale:1},46.73);
+tl.set("#g37w1",{color:"#FFC48A",scale:1.1},46.73);tl.set("#g37w1",{color:"#FFFFFF",scale:1},46.89);
+tl.set("#g37w2",{color:"#FFC48A",scale:1.1},46.89);tl.set("#g37w2",{color:"#FFFFFF",scale:1},47.29);
+tl.set("#g37w3",{color:"#FFC48A",scale:1.1},47.29);tl.set("#g37w3",{color:"#FFFFFF",scale:1},47.38);
+tl.set("#g37",{opacity:0,visibility:"hidden"},47.38);
+tl.set("#g38",{opacity:1,visibility:"visible"},47.4);
+tl.fromTo("#g38",{y:14},{y:0,duration:.18,ease:"power2.out"},47.4);
+tl.set("#g38w0",{color:"#FFC48A",scale:1.1},47.45);tl.set("#g38w0",{color:"#FFFFFF",scale:1},47.69);
+tl.set("#g38w1",{color:"#FFC48A",scale:1.1},47.69);tl.set("#g38w1",{color:"#FFFFFF",scale:1},48.09);
+tl.set("#g38",{opacity:0,visibility:"hidden"},48.21);
+tl.set("#g39",{opacity:1,visibility:"visible"},49.11);
+tl.fromTo("#g39",{y:14},{y:0,duration:.18,ease:"power2.out"},49.11);
+tl.set("#g39w0",{color:"#FFC48A",scale:1.1},49.16);tl.set("#g39w0",{color:"#FFFFFF",scale:1},49.48);
+tl.set("#g39w1",{color:"#FFC48A",scale:1.1},49.48);tl.set("#g39w1",{color:"#FFFFFF",scale:1},49.8);
+tl.set("#g39w2",{color:"#FFC48A",scale:1.1},49.8);tl.set("#g39w2",{color:"#FFFFFF",scale:1},50.28);
+tl.set("#g39w3",{color:"#FFC48A",scale:1.1},50.28);tl.set("#g39w3",{color:"#FFFFFF",scale:1},50.53);
+tl.set("#g39",{opacity:0,visibility:"hidden"},50.53);
+tl.set("#g40",{opacity:1,visibility:"visible"},50.55);
+tl.fromTo("#g40",{y:14},{y:0,duration:.18,ease:"power2.out"},50.55);
+tl.set("#g40w0",{color:"#FFC48A",scale:1.1},50.6);tl.set("#g40w0",{color:"#FFFFFF",scale:1},50.84);
+tl.set("#g40w1",{color:"#FFC48A",scale:1.1},50.84);tl.set("#g40w1",{color:"#FFFFFF",scale:1},51.32);
+tl.set("#g40w2",{color:"#FFC48A",scale:1.1},51.32);tl.set("#g40w2",{color:"#FFFFFF",scale:1},51.56);
+tl.set("#g40w3",{color:"#FFC48A",scale:1.1},51.56);tl.set("#g40w3",{color:"#FFFFFF",scale:1},51.65);
+tl.set("#g40",{opacity:0,visibility:"hidden"},51.65);
+tl.set("#g41",{opacity:1,visibility:"visible"},51.67);
+tl.fromTo("#g41",{y:14},{y:0,duration:.18,ease:"power2.out"},51.67);
+tl.set("#g41w0",{color:"#FFC48A",scale:1.1},51.72);tl.set("#g41w0",{color:"#FFFFFF",scale:1},52.2);
+tl.set("#g41",{opacity:0,visibility:"hidden"},52.32);
+tl.set("#g42",{opacity:1,visibility:"visible"},53.35);
+tl.fromTo("#g42",{y:14},{y:0,duration:.18,ease:"power2.out"},53.35);
+tl.set("#g42w0",{color:"#FFC48A",scale:1.1},53.4);tl.set("#g42w0",{color:"#FFFFFF",scale:1},53.8);
+tl.set("#g42",{opacity:0,visibility:"hidden"},53.89);
+tl.set("#g43",{opacity:1,visibility:"visible"},53.91);
+tl.fromTo("#g43",{y:14},{y:0,duration:.18,ease:"power2.out"},53.91);
+tl.set("#g43w0",{color:"#FFC48A",scale:1.1},53.96);tl.set("#g43w0",{color:"#FFFFFF",scale:1},54.2);
+tl.set("#g43w1",{color:"#FFC48A",scale:1.1},54.2);tl.set("#g43w1",{color:"#FFFFFF",scale:1},54.44);
+tl.set("#g43w2",{color:"#FFC48A",scale:1.1},54.44);tl.set("#g43w2",{color:"#FFFFFF",scale:1},54.6);
+tl.set("#g43w3",{color:"#FFC48A",scale:1.1},54.6);tl.set("#g43w3",{color:"#FFFFFF",scale:1},54.77);
+tl.set("#g43",{opacity:0,visibility:"hidden"},54.77);
+tl.set("#g44",{opacity:1,visibility:"visible"},54.79);
+tl.fromTo("#g44",{y:14},{y:0,duration:.18,ease:"power2.out"},54.79);
+tl.set("#g44w0",{color:"#FFC48A",scale:1.1},54.84);tl.set("#g44w0",{color:"#FFFFFF",scale:1},55.33);
+tl.set("#g44",{opacity:0,visibility:"hidden"},55.33);
+tl.set("#g45",{opacity:1,visibility:"visible"},55.35);
+tl.fromTo("#g45",{y:14},{y:0,duration:.18,ease:"power2.out"},55.35);
+tl.set("#g45w0",{color:"#FFC48A",scale:1.1},55.4);tl.set("#g45w0",{color:"#FFFFFF",scale:1},55.64);
+tl.set("#g45w1",{color:"#FFC48A",scale:1.1},55.64);tl.set("#g45w1",{color:"#FFFFFF",scale:1},55.96);
+tl.set("#g45w2",{color:"#FFC48A",scale:1.1},55.96);tl.set("#g45w2",{color:"#FFFFFF",scale:1},56.28);
+tl.set("#g45w3",{color:"#FFC48A",scale:1.1},56.36);tl.set("#g45w3",{color:"#FFFFFF",scale:1},56.69);
+tl.set("#g45",{opacity:0,visibility:"hidden"},56.69);
+tl.set("#g46",{opacity:1,visibility:"visible"},56.71);
+tl.fromTo("#g46",{y:14},{y:0,duration:.18,ease:"power2.out"},56.71);
+tl.set("#g46w0",{color:"#FFC48A",scale:1.1},56.76);tl.set("#g46w0",{color:"#FFFFFF",scale:1},56.84);
+tl.set("#g46w1",{color:"#FFC48A",scale:1.1},56.84);tl.set("#g46w1",{color:"#FFFFFF",scale:1},57.72);
+tl.set("#g46w2",{color:"#FFC48A",scale:1.1},57.72);tl.set("#g46w2",{color:"#FFFFFF",scale:1},58.21);
+tl.set("#g46",{opacity:0,visibility:"hidden"},58.21);
+tl.set("#g47",{opacity:1,visibility:"visible"},58.23);
+tl.fromTo("#g47",{y:14},{y:0,duration:.18,ease:"power2.out"},58.23);
+tl.set("#g47w0",{color:"#FFC48A",scale:1.1},58.28);tl.set("#g47w0",{color:"#FFFFFF",scale:1},58.52);
+tl.set("#g47w1",{color:"#FFC48A",scale:1.1},58.52);tl.set("#g47w1",{color:"#FFFFFF",scale:1},58.68);
+tl.set("#g47w2",{color:"#FFC48A",scale:1.1},58.68);tl.set("#g47w2",{color:"#FFFFFF",scale:1},58.92);
+tl.set("#g47w3",{color:"#FFC48A",scale:1.1},58.92);tl.set("#g47w3",{color:"#FFFFFF",scale:1},59.33);
+tl.set("#g47",{opacity:0,visibility:"hidden"},59.33);
+tl.set("#g48",{opacity:1,visibility:"visible"},59.35);
+tl.fromTo("#g48",{y:14},{y:0,duration:.18,ease:"power2.out"},59.35);
+tl.set("#g48w0",{color:"#FFC48A",scale:1.1},59.4);tl.set("#g48w0",{color:"#FFFFFF",scale:1},59.8);
+tl.set("#g48",{opacity:0,visibility:"hidden"},59.92);
+tl.set("#g49",{opacity:1,visibility:"visible"},61.05);
+tl.fromTo("#g49",{y:14},{y:0,duration:.18,ease:"power2.out"},61.05);
+tl.set("#g49w0",{color:"#FFC48A",scale:1.1},61.1);tl.set("#g49w0",{color:"#FFFFFF",scale:1},61.66);
+tl.set("#g49w1",{color:"#FFC48A",scale:1.1},61.66);tl.set("#g49w1",{color:"#FFFFFF",scale:1},61.82);
+tl.set("#g49w2",{color:"#FFC48A",scale:1.1},61.82);tl.set("#g49w2",{color:"#FFFFFF",scale:1},61.98);
+tl.set("#g49w3",{color:"#FFC48A",scale:1.1},61.98);tl.set("#g49w3",{color:"#FFFFFF",scale:1},62.23);
+tl.set("#g49",{opacity:0,visibility:"hidden"},62.23);
+tl.set("#g50",{opacity:1,visibility:"visible"},62.25);
+tl.fromTo("#g50",{y:14},{y:0,duration:.18,ease:"power2.out"},62.25);
+tl.set("#g50w0",{color:"#FFC48A",scale:1.1},62.3);tl.set("#g50w0",{color:"#FFFFFF",scale:1},62.54);
+tl.set("#g50w1",{color:"#FFC48A",scale:1.1},62.54);tl.set("#g50w1",{color:"#FFFFFF",scale:1},62.87);
+tl.set("#g50",{opacity:0,visibility:"hidden"},62.87);
+tl.set("#g51",{opacity:1,visibility:"visible"},62.89);
+tl.fromTo("#g51",{y:14},{y:0,duration:.18,ease:"power2.out"},62.89);
+tl.set("#g51w0",{color:"#FFC48A",scale:1.1},62.94);tl.set("#g51w0",{color:"#FFFFFF",scale:1},63.18);
+tl.set("#g51w1",{color:"#FFC48A",scale:1.1},63.18);tl.set("#g51w1",{color:"#FFFFFF",scale:1},63.42);
+tl.set("#g51w2",{color:"#FFC48A",scale:1.1},63.42);tl.set("#g51w2",{color:"#FFFFFF",scale:1},63.58);
+tl.set("#g51w3",{color:"#FFC48A",scale:1.1},63.58);tl.set("#g51w3",{color:"#FFFFFF",scale:1},64.06);
+tl.set("#g51",{opacity:0,visibility:"hidden"},64.18);
+tl.set("#g52",{opacity:1,visibility:"visible"},65.4);
+tl.fromTo("#g52",{y:14},{y:0,duration:.18,ease:"power2.out"},65.4);
+tl.set("#g52w0",{color:"#FFC48A",scale:1.1},65.45);tl.set("#g52w0",{color:"#FFFFFF",scale:1},65.69);
+tl.set("#g52w1",{color:"#FFC48A",scale:1.1},65.77);tl.set("#g52w1",{color:"#FFFFFF",scale:1},66.01);
+tl.set("#g52w2",{color:"#FFC48A",scale:1.1},66.01);tl.set("#g52w2",{color:"#FFFFFF",scale:1},66.17);
+tl.set("#g52w3",{color:"#FFC48A",scale:1.1},66.17);tl.set("#g52w3",{color:"#FFFFFF",scale:1},66.66);
+tl.set("#g52",{opacity:0,visibility:"hidden"},66.66);
+tl.set("#g53",{opacity:1,visibility:"visible"},66.68);
+tl.fromTo("#g53",{y:14},{y:0,duration:.18,ease:"power2.out"},66.68);
+tl.set("#g53w0",{color:"#FFC48A",scale:1.1},66.73);tl.set("#g53w0",{color:"#FFFFFF",scale:1},66.89);
+tl.set("#g53w1",{color:"#FFC48A",scale:1.1},66.89);tl.set("#g53w1",{color:"#FFFFFF",scale:1},67.29);
+tl.set("#g53w2",{color:"#FFC48A",scale:1.1},67.29);tl.set("#g53w2",{color:"#FFFFFF",scale:1},67.69);
+tl.set("#g53w3",{color:"#FFC48A",scale:1.1},67.77);tl.set("#g53w3",{color:"#FFFFFF",scale:1},68.1);
+tl.set("#g53",{opacity:0,visibility:"hidden"},68.1);
+tl.set("#g54",{opacity:1,visibility:"visible"},68.12);
+tl.fromTo("#g54",{y:14},{y:0,duration:.18,ease:"power2.out"},68.12);
+tl.set("#g54w0",{color:"#FFC48A",scale:1.1},68.17);tl.set("#g54w0",{color:"#FFFFFF",scale:1},68.49);
+tl.set("#g54w1",{color:"#FFC48A",scale:1.1},68.49);tl.set("#g54w1",{color:"#FFFFFF",scale:1},68.97);
+tl.set("#g54w2",{color:"#FFC48A",scale:1.1},68.97);tl.set("#g54w2",{color:"#FFFFFF",scale:1},69.13);
+tl.set("#g54w3",{color:"#FFC48A",scale:1.1},69.13);tl.set("#g54w3",{color:"#FFFFFF",scale:1},69.38);
+tl.set("#g54",{opacity:0,visibility:"hidden"},69.38);
+tl.set("#g55",{opacity:1,visibility:"visible"},69.4);
+tl.fromTo("#g55",{y:14},{y:0,duration:.18,ease:"power2.out"},69.4);
+tl.set("#g55w0",{color:"#FFC48A",scale:1.1},69.45);tl.set("#g55w0",{color:"#FFFFFF",scale:1},69.69);
+tl.set("#g55w1",{color:"#FFC48A",scale:1.1},69.69);tl.set("#g55w1",{color:"#FFFFFF",scale:1},70.17);
+tl.set("#g55",{opacity:0,visibility:"hidden"},70.29);
+tl.set("#g56",{opacity:1,visibility:"visible"},71.32);
+tl.fromTo("#g56",{y:14},{y:0,duration:.18,ease:"power2.out"},71.32);
+tl.set("#g56w0",{color:"#FFC48A",scale:1.1},71.37);tl.set("#g56w0",{color:"#FFFFFF",scale:1},71.77);
+tl.set("#g56w1",{color:"#FFC48A",scale:1.1},71.77);tl.set("#g56w1",{color:"#FFFFFF",scale:1},72.17);
+tl.set("#g56w2",{color:"#FFC48A",scale:1.1},72.17);tl.set("#g56w2",{color:"#FFFFFF",scale:1},72.49);
+tl.set("#g56w3",{color:"#FFC48A",scale:1.1},72.49);tl.set("#g56w3",{color:"#FFFFFF",scale:1},72.58);
+tl.set("#g56",{opacity:0,visibility:"hidden"},72.58);
+tl.set("#g57",{opacity:1,visibility:"visible"},72.6);
+tl.fromTo("#g57",{y:14},{y:0,duration:.18,ease:"power2.out"},72.6);
+tl.set("#g57w0",{color:"#FFC48A",scale:1.1},72.65);tl.set("#g57w0",{color:"#FFFFFF",scale:1},72.73);
+tl.set("#g57w1",{color:"#FFC48A",scale:1.1},72.73);tl.set("#g57w1",{color:"#FFFFFF",scale:1},72.97);
+tl.set("#g57w2",{color:"#FFC48A",scale:1.1},72.97);tl.set("#g57w2",{color:"#FFFFFF",scale:1},73.45);
+tl.set("#g57",{opacity:0,visibility:"hidden"},73.57);
+tl.set("#g58",{opacity:1,visibility:"visible"},74.76);
+tl.fromTo("#g58",{y:14},{y:0,duration:.18,ease:"power2.out"},74.76);
+tl.set("#g58w0",{color:"#FFC48A",scale:1.1},74.81);tl.set("#g58w0",{color:"#FFFFFF",scale:1},75.05);
+tl.set("#g58w1",{color:"#FFC48A",scale:1.1},75.05);tl.set("#g58w1",{color:"#FFFFFF",scale:1},75.37);
+tl.set("#g58w2",{color:"#FFC48A",scale:1.1},75.37);tl.set("#g58w2",{color:"#FFFFFF",scale:1},75.69);
+tl.set("#g58w3",{color:"#FFC48A",scale:1.1},75.69);tl.set("#g58w3",{color:"#FFFFFF",scale:1},75.94);
+tl.set("#g58",{opacity:0,visibility:"hidden"},75.94);
+tl.set("#g59",{opacity:1,visibility:"visible"},75.96);
+tl.fromTo("#g59",{y:14},{y:0,duration:.18,ease:"power2.out"},75.96);
+tl.set("#g59w0",{color:"#FFC48A",scale:1.1},76.01);tl.set("#g59w0",{color:"#FFFFFF",scale:1},76.17);
+tl.set("#g59w1",{color:"#FFC48A",scale:1.1},76.17);tl.set("#g59w1",{color:"#FFFFFF",scale:1},76.41);
+tl.set("#g59w2",{color:"#FFC48A",scale:1.1},76.41);tl.set("#g59w2",{color:"#FFFFFF",scale:1},76.65);
+tl.set("#g59w3",{color:"#FFC48A",scale:1.1},76.65);tl.set("#g59w3",{color:"#FFFFFF",scale:1},77.06);
+tl.set("#g59",{opacity:0,visibility:"hidden"},77.06);
+tl.set("#g60",{opacity:1,visibility:"visible"},77.08);
+tl.fromTo("#g60",{y:14},{y:0,duration:.18,ease:"power2.out"},77.08);
+tl.set("#g60w0",{color:"#FFC48A",scale:1.1},77.13);tl.set("#g60w0",{color:"#FFFFFF",scale:1},77.45);
+tl.set("#g60",{opacity:0,visibility:"hidden"},77.57);
+tl.set("#g61",{opacity:1,visibility:"visible"},80.54);
+tl.fromTo("#g61",{y:14},{y:0,duration:.18,ease:"power2.out"},80.54);
+tl.set("#g61w0",{color:"#FFC48A",scale:1.1},80.59);tl.set("#g61w0",{color:"#FFFFFF",scale:1},80.83);
+tl.set("#g61w1",{color:"#FFC48A",scale:1.1},80.83);tl.set("#g61w1",{color:"#FFFFFF",scale:1},81.07);
+tl.set("#g61",{opacity:0,visibility:"hidden"},81.16);
+tl.set("#g62",{opacity:1,visibility:"visible"},81.18);
+tl.fromTo("#g62",{y:14},{y:0,duration:.18,ease:"power2.out"},81.18);
+tl.set("#g62w0",{color:"#FFC48A",scale:1.1},81.23);tl.set("#g62w0",{color:"#FFFFFF",scale:1},81.31);
+tl.set("#g62",{opacity:0,visibility:"hidden"},81.4);
+tl.set("#g63",{opacity:1,visibility:"visible"},81.42);
+tl.fromTo("#g63",{y:14},{y:0,duration:.18,ease:"power2.out"},81.42);
+tl.set("#g63w0",{color:"#FFC48A",scale:1.1},81.47);tl.set("#g63w0",{color:"#FFFFFF",scale:1},81.55);
+tl.set("#g63w1",{color:"#FFC48A",scale:1.1},81.55);tl.set("#g63w1",{color:"#FFFFFF",scale:1},81.71);
+tl.set("#g63",{opacity:0,visibility:"hidden"},81.72);
+tl.set("#g64",{opacity:1,visibility:"visible"},81.74);
+tl.fromTo("#g64",{y:14},{y:0,duration:.18,ease:"power2.out"},81.74);
+tl.set("#g64w0",{color:"#FFC48A",scale:1.1},81.79);tl.set("#g64w0",{color:"#FFFFFF",scale:1},82.03);
+tl.set("#g64w1",{color:"#FFC48A",scale:1.1},82.03);tl.set("#g64w1",{color:"#FFFFFF",scale:1},82.27);
+tl.set("#g64w2",{color:"#FFC48A",scale:1.1},82.27);tl.set("#g64w2",{color:"#FFFFFF",scale:1},82.51);
+tl.set("#g64w3",{color:"#FFC48A",scale:1.1},82.51);tl.set("#g64w3",{color:"#FFFFFF",scale:1},83.07);
+tl.set("#g64",{opacity:0,visibility:"hidden"},83.19);
+tl.set("#g65",{opacity:1,visibility:"visible"},84.07);
+tl.fromTo("#g65",{y:14},{y:0,duration:.18,ease:"power2.out"},84.07);
+tl.set("#g65w0",{color:"#FFC48A",scale:1.1},84.12);tl.set("#g65w0",{color:"#FFFFFF",scale:1},84.6);
+tl.set("#g65w1",{color:"#FFC48A",scale:1.1},84.6);tl.set("#g65w1",{color:"#FFFFFF",scale:1},85.01);
+tl.set("#g65",{opacity:0,visibility:"hidden"},85.01);
+tl.set("#g66",{opacity:1,visibility:"visible"},85.03);
+tl.fromTo("#g66",{y:14},{y:0,duration:.18,ease:"power2.out"},85.03);
+tl.set("#g66w0",{color:"#FFC48A",scale:1.1},85.08);tl.set("#g66w0",{color:"#FFFFFF",scale:1},85.24);
+tl.set("#g66w1",{color:"#FFC48A",scale:1.1},85.24);tl.set("#g66w1",{color:"#FFFFFF",scale:1},85.4);
+tl.set("#g66w2",{color:"#FFC48A",scale:1.1},85.4);tl.set("#g66w2",{color:"#FFFFFF",scale:1},85.72);
+tl.set("#g66w3",{color:"#FFC48A",scale:1.1},85.72);tl.set("#g66w3",{color:"#FFFFFF",scale:1},85.81);
+tl.set("#g66",{opacity:0,visibility:"hidden"},85.81);
+tl.set("#g67",{opacity:1,visibility:"visible"},85.83);
+tl.fromTo("#g67",{y:14},{y:0,duration:.18,ease:"power2.out"},85.83);
+tl.set("#g67w0",{color:"#FFC48A",scale:1.1},85.88);tl.set("#g67w0",{color:"#FFFFFF",scale:1},86.36);
+tl.set("#g67w1",{color:"#FFC48A",scale:1.1},86.36);tl.set("#g67w1",{color:"#FFFFFF",scale:1},86.68);
+tl.set("#g67w2",{color:"#FFC48A",scale:1.1},86.68);tl.set("#g67w2",{color:"#FFFFFF",scale:1},87.16);
+tl.set("#g67",{opacity:0,visibility:"hidden"},87.28);
+tl.set("#g68",{opacity:1,visibility:"visible"},88.5);
+tl.fromTo("#g68",{y:14},{y:0,duration:.18,ease:"power2.out"},88.5);
+tl.set("#g68w0",{color:"#FFC48A",scale:1.1},88.55);tl.set("#g68w0",{color:"#FFFFFF",scale:1},88.87);
+tl.set("#g68w1",{color:"#FFC48A",scale:1.1},88.87);tl.set("#g68w1",{color:"#FFFFFF",scale:1},89.03);
+tl.set("#g68",{opacity:0,visibility:"hidden"},89.15);
+tl.set("#g69",{opacity:1,visibility:"visible"},89.22);
+tl.fromTo("#g69",{y:14},{y:0,duration:.18,ease:"power2.out"},89.22);
+tl.set("#g69w0",{color:"#FFC48A",scale:1.1},89.27);tl.set("#g69w0",{color:"#FFFFFF",scale:1},89.43);
+tl.set("#g69w1",{color:"#FFC48A",scale:1.1},89.51);tl.set("#g69w1",{color:"#FFFFFF",scale:1},89.76);
+tl.set("#g69",{opacity:0,visibility:"hidden"},89.76);
+tl.set("#g70",{opacity:1,visibility:"visible"},89.78);
+tl.fromTo("#g70",{y:14},{y:0,duration:.18,ease:"power2.out"},89.78);
+tl.set("#g70w0",{color:"#FFC48A",scale:1.1},89.83);tl.set("#g70w0",{color:"#FFFFFF",scale:1},89.99);
+tl.set("#g70w1",{color:"#FFC48A",scale:1.1},89.99);tl.set("#g70w1",{color:"#FFFFFF",scale:1},90.07);
+tl.set("#g70w2",{color:"#FFC48A",scale:1.1},90.07);tl.set("#g70w2",{color:"#FFFFFF",scale:1},90.23);
+tl.set("#g70w3",{color:"#FFC48A",scale:1.1},90.23);tl.set("#g70w3",{color:"#FFFFFF",scale:1},90.71);
+tl.set("#g70",{opacity:0,visibility:"hidden"},90.83);
+tl.set("#g71",{opacity:1,visibility:"visible"},91.94);
+tl.fromTo("#g71",{y:14},{y:0,duration:.18,ease:"power2.out"},91.94);
+tl.set("#g71w0",{color:"#FFC48A",scale:1.1},91.99);tl.set("#g71w0",{color:"#FFFFFF",scale:1},92.31);
+tl.set("#g71w1",{color:"#FFC48A",scale:1.1},92.31);tl.set("#g71w1",{color:"#FFFFFF",scale:1},92.63);
+tl.set("#g71",{opacity:0,visibility:"hidden"},92.75);
+tl.set("#g72",{opacity:1,visibility:"visible"},92.82);
+tl.fromTo("#g72",{y:14},{y:0,duration:.18,ease:"power2.out"},92.82);
+tl.set("#g72w0",{color:"#FFC48A",scale:1.1},92.87);tl.set("#g72w0",{color:"#FFFFFF",scale:1},93.35);
+tl.set("#g72w1",{color:"#FFC48A",scale:1.1},93.35);tl.set("#g72w1",{color:"#FFFFFF",scale:1},93.84);
+tl.set("#g72",{opacity:0,visibility:"hidden"},93.84);
+tl.set("#g73",{opacity:1,visibility:"visible"},93.86);
+tl.fromTo("#g73",{y:14},{y:0,duration:.18,ease:"power2.out"},93.86);
+tl.set("#g73w0",{color:"#FFC48A",scale:1.1},93.91);tl.set("#g73w0",{color:"#FFFFFF",scale:1},94.07);
+tl.set("#g73w1",{color:"#FFC48A",scale:1.1},94.07);tl.set("#g73w1",{color:"#FFFFFF",scale:1},94.23);
+tl.set("#g73w2",{color:"#FFC48A",scale:1.1},94.23);tl.set("#g73w2",{color:"#FFFFFF",scale:1},94.39);
+tl.set("#g73w3",{color:"#FFC48A",scale:1.1},94.47);tl.set("#g73w3",{color:"#FFFFFF",scale:1},94.63);
+tl.set("#g73",{opacity:0,visibility:"hidden"},94.64);
+tl.set("#g74",{opacity:1,visibility:"visible"},94.66);
+tl.fromTo("#g74",{y:14},{y:0,duration:.18,ease:"power2.out"},94.66);
+tl.set("#g74w0",{color:"#FFC48A",scale:1.1},94.71);tl.set("#g74w0",{color:"#FFFFFF",scale:1},94.87);
+tl.set("#g74w1",{color:"#FFC48A",scale:1.1},94.87);tl.set("#g74w1",{color:"#FFFFFF",scale:1},95.27);
+tl.set("#g74",{opacity:0,visibility:"hidden"},95.39);
+tl.set("#g75",{opacity:1,visibility:"visible"},96.74);
+tl.fromTo("#g75",{y:14},{y:0,duration:.18,ease:"power2.out"},96.74);
+tl.set("#g75w0",{color:"#FFC48A",scale:1.1},96.79);tl.set("#g75w0",{color:"#FFFFFF",scale:1},96.95);
+tl.set("#g75w1",{color:"#FFC48A",scale:1.1},97.03);tl.set("#g75w1",{color:"#FFFFFF",scale:1},97.19);
+tl.set("#g75w2",{color:"#FFC48A",scale:1.1},97.19);tl.set("#g75w2",{color:"#FFFFFF",scale:1},97.59);
+tl.set("#g75w3",{color:"#FFC48A",scale:1.1},97.59);tl.set("#g75w3",{color:"#FFFFFF",scale:1},97.99);
+tl.set("#g75",{opacity:0,visibility:"hidden"},98);
+tl.set("#g76",{opacity:1,visibility:"visible"},98.02);
+tl.fromTo("#g76",{y:14},{y:0,duration:.18,ease:"power2.out"},98.02);
+tl.set("#g76w0",{color:"#FFC48A",scale:1.1},98.07);tl.set("#g76w0",{color:"#FFFFFF",scale:1},98.23);
+tl.set("#g76w1",{color:"#FFC48A",scale:1.1},98.23);tl.set("#g76w1",{color:"#FFFFFF",scale:1},98.47);
+tl.set("#g76w2",{color:"#FFC48A",scale:1.1},98.47);tl.set("#g76w2",{color:"#FFFFFF",scale:1},98.79);
+tl.set("#g76w3",{color:"#FFC48A",scale:1.1},98.87);tl.set("#g76w3",{color:"#FFFFFF",scale:1},99.12);
+tl.set("#g76",{opacity:0,visibility:"hidden"},99.12);
+tl.set("#g77",{opacity:1,visibility:"visible"},99.14);
+tl.fromTo("#g77",{y:14},{y:0,duration:.18,ease:"power2.out"},99.14);
+tl.set("#g77w0",{color:"#FFC48A",scale:1.1},99.19);tl.set("#g77w0",{color:"#FFFFFF",scale:1},99.59);
+tl.set("#g77w1",{color:"#FFC48A",scale:1.1},99.59);tl.set("#g77w1",{color:"#FFFFFF",scale:1},99.91);
+tl.set("#g77w2",{color:"#FFC48A",scale:1.1},99.91);tl.set("#g77w2",{color:"#FFFFFF",scale:1},100.47);
+tl.set("#g77",{opacity:0,visibility:"hidden"},100.59);
+tl.set("#g78",{opacity:1,visibility:"visible"},101.71);
+tl.fromTo("#g78",{y:14},{y:0,duration:.18,ease:"power2.out"},101.71);
+tl.set("#g78w0",{color:"#FFC48A",scale:1.1},101.76);tl.set("#g78w0",{color:"#FFFFFF",scale:1},102.08);
+tl.set("#g78w1",{color:"#FFC48A",scale:1.1},102.08);tl.set("#g78w1",{color:"#FFFFFF",scale:1},102.4);
+tl.set("#g78",{opacity:0,visibility:"hidden"},102.41);
+tl.set("#g79",{opacity:1,visibility:"visible"},102.43);
+tl.fromTo("#g79",{y:14},{y:0,duration:.18,ease:"power2.out"},102.43);
+tl.set("#g79w0",{color:"#FFC48A",scale:1.1},102.48);tl.set("#g79w0",{color:"#FFFFFF",scale:1},102.64);
+tl.set("#g79w1",{color:"#FFC48A",scale:1.1},102.64);tl.set("#g79w1",{color:"#FFFFFF",scale:1},102.8);
+tl.set("#g79w2",{color:"#FFC48A",scale:1.1},102.8);tl.set("#g79w2",{color:"#FFFFFF",scale:1},103.2);
+tl.set("#g79w3",{color:"#FFC48A",scale:1.1},103.2);tl.set("#g79w3",{color:"#FFFFFF",scale:1},103.29);
+tl.set("#g79",{opacity:0,visibility:"hidden"},103.29);
+tl.set("#g80",{opacity:1,visibility:"visible"},103.31);
+tl.fromTo("#g80",{y:14},{y:0,duration:.18,ease:"power2.out"},103.31);
+tl.set("#g80w0",{color:"#FFC48A",scale:1.1},103.36);tl.set("#g80w0",{color:"#FFFFFF",scale:1},103.68);
+tl.set("#g80",{opacity:0,visibility:"hidden"},103.69);
+tl.set("#g81",{opacity:1,visibility:"visible"},103.71);
+tl.fromTo("#g81",{y:14},{y:0,duration:.18,ease:"power2.out"},103.71);
+tl.set("#g81w0",{color:"#FFC48A",scale:1.1},103.76);tl.set("#g81w0",{color:"#FFFFFF",scale:1},104);
+tl.set("#g81w1",{color:"#FFC48A",scale:1.1},104);tl.set("#g81w1",{color:"#FFFFFF",scale:1},104.4);
+tl.set("#g81w2",{color:"#FFC48A",scale:1.1},104.4);tl.set("#g81w2",{color:"#FFFFFF",scale:1},104.72);
+tl.set("#g81w3",{color:"#FFC48A",scale:1.1},104.72);tl.set("#g81w3",{color:"#FFFFFF",scale:1},105.2);
+tl.set("#g81",{opacity:0,visibility:"hidden"},105.32);
+tl.set("#g82",{opacity:1,visibility:"visible"},107.37);
+tl.fromTo("#g82",{y:14},{y:0,duration:.18,ease:"power2.out"},107.37);
+tl.set("#g82w0",{color:"#FFC48A",scale:1.1},107.42);tl.set("#g82w0",{color:"#FFFFFF",scale:1},107.74);
+tl.set("#g82w1",{color:"#FFC48A",scale:1.1},107.74);tl.set("#g82w1",{color:"#FFFFFF",scale:1},107.9);
+tl.set("#g82w2",{color:"#FFC48A",scale:1.1},107.9);tl.set("#g82w2",{color:"#FFFFFF",scale:1},108.3);
+tl.set("#g82w3",{color:"#FFC48A",scale:1.1},108.3);tl.set("#g82w3",{color:"#FFFFFF",scale:1},108.47);
+tl.set("#g82",{opacity:0,visibility:"hidden"},108.47);
+tl.set("#g83",{opacity:1,visibility:"visible"},108.49);
+tl.fromTo("#g83",{y:14},{y:0,duration:.18,ease:"power2.out"},108.49);
+tl.set("#g83w0",{color:"#FFC48A",scale:1.1},108.54);tl.set("#g83w0",{color:"#FFFFFF",scale:1},108.86);
+tl.set("#g83w1",{color:"#FFC48A",scale:1.1},108.86);tl.set("#g83w1",{color:"#FFFFFF",scale:1},109.34);
+tl.set("#g83w2",{color:"#FFC48A",scale:1.1},109.34);tl.set("#g83w2",{color:"#FFFFFF",scale:1},109.58);
+tl.set("#g83w3",{color:"#FFC48A",scale:1.1},109.58);tl.set("#g83w3",{color:"#FFFFFF",scale:1},109.91);
+tl.set("#g83",{opacity:0,visibility:"hidden"},109.91);
+tl.set("#g84",{opacity:1,visibility:"visible"},109.93);
+tl.fromTo("#g84",{y:14},{y:0,duration:.18,ease:"power2.out"},109.93);
+tl.set("#g84w0",{color:"#FFC48A",scale:1.1},109.98);tl.set("#g84w0",{color:"#FFFFFF",scale:1},110.55);
+tl.set("#g84",{opacity:0,visibility:"hidden"},110.55);
+tl.set("#g85",{opacity:1,visibility:"visible"},110.57);
+tl.fromTo("#g85",{y:14},{y:0,duration:.18,ease:"power2.out"},110.57);
+tl.set("#g85w0",{color:"#FFC48A",scale:1.1},110.62);tl.set("#g85w0",{color:"#FFFFFF",scale:1},110.86);
+tl.set("#g85w1",{color:"#FFC48A",scale:1.1},110.86);tl.set("#g85w1",{color:"#FFFFFF",scale:1},111.1);
+tl.set("#g85w2",{color:"#FFC48A",scale:1.1},111.1);tl.set("#g85w2",{color:"#FFFFFF",scale:1},111.5);
+tl.set("#g85",{opacity:0,visibility:"hidden"},111.59);
+tl.set("#g86",{opacity:1,visibility:"visible"},111.61);
+tl.fromTo("#g86",{y:14},{y:0,duration:.18,ease:"power2.out"},111.61);
+tl.set("#g86w0",{color:"#FFC48A",scale:1.1},111.66);tl.set("#g86w0",{color:"#FFFFFF",scale:1},111.98);
+tl.set("#g86",{opacity:0,visibility:"hidden"},112.1);
+    window.__timelines["captions"] = tl;
+  </script>
+</template>

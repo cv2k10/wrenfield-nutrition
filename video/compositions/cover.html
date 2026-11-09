@@ -1,0 +1,51 @@
+<template>
+  <style>
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces-italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; }
+    @font-face { font-family: "Outfit"; src: url("assets/fonts/outfit.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; overflow: hidden; }
+
+    #c-wrap { position: absolute; inset: 0; background: #FBF7F0; }
+    #c-plate { position: absolute; left: 1060px; top: 90px; width: 900px; height: 900px; border-radius: 50%; background: #F2E6CF; box-shadow: inset 0 0 0 28px #EADBBE; }
+    #c-tag { position: absolute; left: 140px; top: 170px; padding: 12px 22px; border-radius: 12px; background: #C4623F; color: #fff; font: 800 30px/1 Outfit; letter-spacing: .06em; text-transform: uppercase; }
+    #c-t1, #c-t2 { position: absolute; left: 136px; font: 700 132px/1 Fraunces; color: #2F4A3A; letter-spacing: -.02em; }
+    #c-t1 { top: 270px; } #c-t2 { top: 410px; font-style: italic; color: #C4623F; }
+    #c-line { position: absolute; left: 140px; top: 580px; width: 520px; height: 8px; border-radius: 4px; background: #7C8B5A; transform-origin: 0 50%; }
+    #c-desc { position: absolute; left: 140px; top: 630px; width: 820px; font: 400 38px/1.4 Outfit; color: #2F4A3A; }
+    #c-shot { position: absolute; left: 1010px; top: 250px; width: 820px; border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 30px 70px rgba(31,51,40,.3); }
+    #c-shot .b { height: 40px; background: #EFE7D9; font: 500 15px/40px Outfit; color: #2F4A3A; text-align: center; }
+    #c-shot img { display: block; width: 820px; }
+    .chip { position: absolute; padding: 14px 22px; border-radius: 40px; background: #fff; color: #2F4A3A; font: 700 28px/1 Outfit; box-shadow: 0 12px 28px rgba(31,51,40,.22); }
+    .chip i { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #3E8E5E; margin-right: 12px; vertical-align: 1px; }
+  </style>
+  <div id="root" data-composition-id="cover" data-width="1920" data-height="1080" data-layout-allow-overflow data-layout-allow-overlap>
+
+    <div id="c-wrap">
+      <div id="c-plate"></div>
+      <div id="c-tag">Website demo</div>
+      <div id="c-t1">From curious</div>
+      <div id="c-t2">to booked.</div>
+      <div id="c-line"></div>
+      <div id="c-desc">A quick tour of a nutrition coaching website: a 2-minute quiz that captures leads, clear plans, and a 4-step booking form.</div>
+      <div id="c-shot"><div class="b">www.wrenfieldnutrition.demo</div><img src="assets/shots/hero.jpg" alt=""></div>
+      <div class="chip" style="left:1090px;top:690px"><i></i>Lead-magnet quiz</div>
+      <div class="chip" style="left:1440px;top:760px"><i></i>4-step booking</div>
+      <div class="chip" style="left:1180px;top:830px"><i></i>Mobile-ready</div>
+    </div>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#c-tag",{opacity:0,scale:.6,rotation:-12},{opacity:1,scale:1,rotation:-4,duration:.5,ease:"back.out(2.2)"},0.25);
+tl.fromTo("#c-t1",{opacity:0,y:60},{opacity:1,y:0,duration:.7,ease:"power4.out"},0.45);
+tl.fromTo("#c-t2",{opacity:0,y:60},{opacity:1,y:0,duration:.7,ease:"power4.out"},0.65);
+tl.fromTo("#c-line",{scaleX:0},{scaleX:1,duration:.7,ease:"power3.inOut"},1.1);
+tl.fromTo("#c-desc",{opacity:0,y:24},{opacity:1,y:0,duration:.6,ease:"power3.out"},1.3);
+tl.fromTo("#c-shot",{opacity:0,x:120,rotation:6},{opacity:1,x:0,rotation:3,duration:1,ease:"power4.out"},0.5);
+tl.fromTo("#c-plate",{scale:.4,opacity:0},{scale:1,opacity:1,duration:1.1,ease:"power3.out"},0.2);
+tl.fromTo(".chip",{opacity:0,y:30,scale:.8},{opacity:1,y:0,scale:1,duration:.45,ease:"back.out(2)",stagger:.28},1.7);
+tl.to("#c-shot",{y:-14,duration:4.2,ease:"sine.inOut"},1.5);
+tl.to("#c-wrap",{y:-1080,duration:.65,ease:"power3.in"},5.15);
+    window.__timelines["cover"] = tl;
+  </script>
+</template>

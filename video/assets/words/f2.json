@@ -1,0 +1,50 @@
+[
+  {
+    "id": "w0",
+    "text": "Step",
+    "start": 0,
+    "end": 0.32
+  },
+  {
+    "id": "w1",
+    "text": "two",
+    "start": 0.32,
+    "end": 0.48
+  },
+  {
+    "id": "w2",
+    "text": "Their",
+    "start": 0.72,
+    "end": 0.88
+  },
+  {
+    "id": "w3",
+    "text": "goals",
+    "start": 0.96,
+    "end": 1.28
+  },
+  {
+    "id": "w4",
+    "text": "in",
+    "start": 1.28,
+    "end": 1.44
+  },
+  {
+    "id": "w5",
+    "text": "a",
+    "start": 1.44,
+    "end": 1.52
+  },
+  {
+    "id": "w6",
+    "text": "few",
+    "start": 1.52,
+    "end": 1.68
+  },
+  {
+    "id": "w7",
+    "text": "taps.",
+    "start": 1.68,
+    "end": 2.16
+  }
+]

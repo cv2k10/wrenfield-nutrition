@@ -1,0 +1,56 @@
+[
+  {
+    "id": "w0",
+    "text": "Four",
+    "start": 0,
+    "end": 0.32
+  },
+  {
+    "id": "w1",
+    "text": "simple",
+    "start": 0.32,
+    "end": 0.64
+  },
+  {
+    "id": "w2",
+    "text": "steps",
+    "start": 0.64,
+    "end": 1.12
+  },
+  {
+    "id": "w3",
+    "text": "show",
+    "start": 1.12,
+    "end": 1.44
+  },
+  {
+    "id": "w4",
+    "text": "what",
+    "start": 1.44,
+    "end": 1.68
+  },
+  {
+    "id": "w5",
+    "text": "happens",
+    "start": 1.68,
+    "end": 2.16
+  },
+  {
+    "id": "w6",
+    "text": "after",
+    "start": 2.16,
+    "end": 2.4
+  },
+  {
+    "id": "w7",
+    "text": "the",
+    "start": 2.4,
+    "end": 2.56
+  },
+  {
+    "id": "w8",
+    "text": "call.",
+    "start": 2.56,
+    "end": 3.04
+  }
+]

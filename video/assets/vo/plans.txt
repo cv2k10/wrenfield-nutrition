@@ -1,0 +1,1 @@
+Prices sit right on the page, and each plan opens a week-by-week outline, with its own booking button.

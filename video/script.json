@@ -1,0 +1,21 @@
+[
+{ "id": "intro", "text": "Here's a website we built for a nutrition coach who helps people on GLP-1 medications. Watch how it turns a visitor into a booked call." },
+{ "id": "hero", "text": "The first screen says exactly who it's for, and gives two clear next steps: book a free call, or take a two-minute check." },
+{ "id": "sf", "text": "Visitors tap the problem that sounds like their week, and get a plain answer, plus a button to work on it with a coach." },
+{ "id": "quiz", "text": "The Plate Check is the lead magnet. Seven quick questions, one at a time." },
+{ "id": "quiz2", "text": "Every visitor gets a score, their three weakest areas, and the plan that fits. One button carries all of it into the booking form." },
+{ "id": "dont", "text": "Then it builds trust, by naming the red flags this coach will never sell." },
+{ "id": "how", "text": "Four simple steps show what happens after the call." },
+{ "id": "plans", "text": "Prices sit right on the page, and each plan opens a week-by-week outline, with its own booking button." },
+{ "id": "toolkit", "text": "Visitors see what they'll take home, and meet the coach." },
+{ "id": "guide", "text": "Not ready to book? A free protein guide still captures their name and email." },
+{ "id": "faq", "text": "Straight answers clear up the last doubts." },
+{ "id": "final", "text": "And every path leads to one short booking form." },
+{ "id": "f1", "text": "Step one: where they are, and their main concern." },
+{ "id": "f1err", "text": "Skip something, and it points to exactly what's missing." },
+{ "id": "f2", "text": "Step two: their goals, in a few taps." },
+{ "id": "f3", "text": "Step three: contact details, and the best time to talk." },
+{ "id": "f4", "text": "Then a review screen, with their Plate Check score already attached." },
+{ "id": "f5", "text": "One click, and the request is in, with clear next steps." },
+{ "id": "cta", "text": "Want a website that turns visitors into booked calls? Talk to Delta Web." }
+]

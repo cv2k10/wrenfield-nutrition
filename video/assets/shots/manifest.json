@@ -1,0 +1,358 @@
+{
+ "y": {
+  "sf": 879,
+  "quiz": 1589,
+  "dont": 2713,
+  "how": 3672,
+  "plans": 4324,
+  "coach": 6746,
+  "faq": 8417,
+  "toolkit": 6088,
+  "guide": 7868,
+  "final": 9655,
+  "compare": 5135
+ },
+ "rects": {},
+ "states": {
+  "hero": {
+   "scrollY": 0,
+   "h1": {
+    "x": 408,
+    "y": 223.4,
+    "width": 536,
+    "height": 259.2
+   },
+   "card": {
+    "x": 1016.6,
+    "y": 664.5,
+    "width": 286.8,
+    "height": 54.5
+   },
+   "cta": {
+    "x": 408,
+    "y": 650.6,
+    "width": 166.8,
+    "height": 44
+   },
+   "quizcta": {
+    "x": 586.8,
+    "y": 650.6,
+    "width": 263.3,
+    "height": 44
+   }
+  },
+  "sf_open": {
+   "scrollY": 839,
+   "card": {
+    "x": 409,
+    "y": 469.1,
+    "width": 542,
+    "height": 84.3
+   },
+   "panel": {
+    "x": 408,
+    "y": 365.8,
+    "width": 1104,
+    "height": 649.7
+   }
+  },
+  "quiz_q1": {
+   "scrollY": 2149,
+   "card": {
+    "x": 577,
+    "y": 200.4,
+    "width": 766,
+    "height": 495.5
+   },
+   "opt": {
+    "x": 609,
+    "y": 431.9,
+    "width": 702,
+    "height": 77.5
+   },
+   "next": {
+    "x": 1211.5,
+    "y": 635.9,
+    "width": 99.5,
+    "height": 44
+   }
+  },
+  "quiz_q1_sel": {
+   "scrollY": 2149,
+   "card": {
+    "x": 577,
+    "y": 200.4,
+    "width": 766,
+    "height": 495.5
+   },
+   "opt": {
+    "x": 609,
+    "y": 431.9,
+    "width": 702,
+    "height": 77.5
+   },
+   "next": {
+    "x": 1211.5,
+    "y": 635.9,
+    "width": 99.5,
+    "height": 44
+   }
+  },
+  "quiz_q4_sel": {
+   "scrollY": 2149,
+   "card": {
+    "x": 577,
+    "y": 200.4,
+    "width": 766,
+    "height": 532.4
+   },
+   "opt": {
+    "x": 609,
+    "y": 431.9,
+    "width": 702,
+    "height": 53.2
+   },
+   "next": {
+    "x": 1211.5,
+    "y": 672.8,
+    "width": 99.5,
+    "height": 44
+   }
+  },
+  "quiz_res1": {
+   "scrollY": 2261
+  },
+  "quiz_res2": {
+   "scrollY": 2941,
+   "bring": {
+    "x": 757.5,
+    "y": 425.0,
+    "width": 275.9,
+    "height": 44
+   }
+  },
+  "plans": {
+   "scrollY": 5414,
+   "btn": {
+    "x": 808.7,
+    "y": 625.3,
+    "width": 148.3,
+    "height": 44
+   }
+  },
+  "plan_dialog": {
+   "scrollY": 5414,
+   "dlg": {
+    "x": 672,
+    "y": 40.3,
+    "width": 576,
+    "height": 927.4
+   }
+  },
+  "guide_filled": {
+   "scrollY": 8758,
+   "form": {
+    "x": 1009,
+    "y": 143.2,
+    "width": 470,
+    "height": 423.3
+   },
+   "btn": {
+    "x": 1009,
+    "y": 522.5,
+    "width": 470,
+    "height": 44
+   }
+  },
+  "guide_done": {
+   "scrollY": 8758
+  },
+  "final": {
+   "scrollY": 10355,
+   "cta": {
+    "x": 749.8,
+    "y": 537.1,
+    "width": 192.8,
+    "height": 44
+   }
+  },
+  "b1": {
+   "scrollY": 10355,
+   "dlg": {
+    "x": 672,
+    "y": 122.5,
+    "width": 576,
+    "height": 763.1
+   },
+   "next": {
+    "x": 1037.5,
+    "y": 824.5,
+    "width": 177.5,
+    "height": 44
+   }
+  },
+  "b1_err": {
+   "scrollY": 10355,
+   "dlg": {
+    "x": 672,
+    "y": 40.3,
+    "width": 576,
+    "height": 927.4
+   },
+   "opt": {
+    "x": 705,
+    "y": 433.5,
+    "width": 510,
+    "height": 49.2
+   }
+  },
+  "b1_ok": {
+   "scrollY": 10355,
+   "dlg": {
+    "x": 672,
+    "y": 122.5,
+    "width": 576,
+    "height": 763.1
+   },
+   "next": {
+    "x": 1037.5,
+    "y": 824.5,
+    "width": 177.5,
+    "height": 44
+   }
+  },
+  "b2": {
+   "scrollY": 10355,
+   "dlg": {
+    "x": 672,
+    "y": 40.3,
+    "width": 576,
+    "height": 927.4
+   },
+   "box": {
+    "x": 705,
+    "y": 229.1,
+    "width": 251,
+    "height": 68.8
+   }
+  },
+  "b2_ok": {
+   "scrollY": 10355,
+   "dlg": {
+    "x": 672,
+    "y": 40.3,
+    "width": 576,
+    "height": 927.4
+   },
+   "next": {
+    "x": 1005.9,
+    "y": 906.7,
+    "width": 209.1,
+    "height": 44
+   }
+  },
+  "b3": {
+   "scrollY": 10355,
+   "dlg": {
+    "x": 672,
+    "y": 198.7,
+    "width": 576,
+    "height": 610.5
+   }
+  },
+  "b3_ok": {
+   "scrollY": 10355,
+   "dlg": {
+    "x": 672,
+    "y": 198.7,
+    "width": 576,
+    "height": 610.5
+   },
+   "next": {
+    "x": 1041.9,
+    "y": 748.3,
+    "width": 173.1,
+    "height": 44
+   }
+  },
+  "b4": {
+   "scrollY": 10355,
+   "dlg": {
+    "x": 672,
+    "y": 40.3,
+    "width": 576,
+    "height": 927.4
+   },
+   "next": {
+    "x": 1039.2,
+    "y": 906.7,
+    "width": 175.8,
+    "height": 44
+   }
+  },
+  "b5": {
+   "scrollY": 10355,
+   "dlg": {
+    "x": 672,
+    "y": 147.5,
+    "width": 576,
+    "height": 712.9
+   }
+  }
+ },
+ "headerBottom": 97.796875,
+ "pageH": 10633,
+ "prect": {
+  "dont_table": {
+   "x": 408,
+   "y": 2904,
+   "width": 1104,
+   "height": 600
+  },
+  "how_cards": {
+   "x": 408,
+   "y": 3958,
+   "width": 1104,
+   "height": 270
+  },
+  "plan_cards": {
+   "x": 408,
+   "y": 4610,
+   "width": 1104,
+   "height": 470
+  },
+  "toolkit": {
+   "x": 885,
+   "y": 5977,
+   "width": 627,
+   "height": 604
+  },
+  "coach_img": {
+   "x": 408,
+   "y": 6842,
+   "width": 437,
+   "height": 476
+  },
+  "promises": {
+   "x": 885,
+   "y": 7293,
+   "width": 627,
+   "height": 359
+  },
+  "faq": {
+   "x": 536,
+   "y": 8632,
+   "width": 848,
+   "height": 695
+  },
+  "sf_cards": {
+   "x": 408,
+   "y": 1205,
+   "width": 1104,
+   "height": 217
+  }
+ },
+ "headerH": 65,
+ "quizText": "THE PLATE CHECK \u00b7 2 MINUTES Is your plate keeping up with your appetite? Seven honest questions about how you're actually eating. You'll get a score out of 100, your three weakest spots, and a plan suggestion to match. Your result: Build the base Your Plate Check score is 17 OUT OF 100 Small appetite is crowding out the basics. Right now, eating less is also meaning eating less of what keeps you w",
+ "successText": "Request noted, Dana Here's what would happen next if this weren't a demo. Step 1: Confirmation email A summary lands at dana.rivera@example.com within minutes. Step 2: A coach replies within two business days With a video link for a Weekday (Mon\u2013Fri) morning \u00b7 8\u201311 slot (ET). Step 3: You meet for 15\u201320 minutes Questions welcome, fit decided together, zero pressure to book anything paid. Demo only:"
+}

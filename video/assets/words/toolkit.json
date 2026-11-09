@@ -1,0 +1,62 @@
+[
+  {
+    "id": "w0",
+    "text": "Visitors",
+    "start": 0,
+    "end": 0.56
+  },
+  {
+    "id": "w1",
+    "text": "see",
+    "start": 0.56,
+    "end": 0.72
+  },
+  {
+    "id": "w2",
+    "text": "what",
+    "start": 0.72,
+    "end": 0.88
+  },
+  {
+    "id": "w3",
+    "text": "they'll",
+    "start": 0.88,
+    "end": 1.2
+  },
+  {
+    "id": "w4",
+    "text": "take",
+    "start": 1.2,
+    "end": 1.44
+  },
+  {
+    "id": "w5",
+    "text": "home",
+    "start": 1.44,
+    "end": 1.84
+  },
+  {
+    "id": "w6",
+    "text": "and",
+    "start": 1.84,
+    "end": 2.08
+  },
+  {
+    "id": "w7",
+    "text": "meet",
+    "start": 2.08,
+    "end": 2.32
+  },
+  {
+    "id": "w8",
+    "text": "the",
+    "start": 2.32,
+    "end": 2.48
+  },
+  {
+    "id": "w9",
+    "text": "coach.",
+    "start": 2.48,
+    "end": 2.96
+  }
+]

@@ -1,0 +1,41 @@
+<template>
+  <style>
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces-italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; }
+    @font-face { font-family: "Outfit"; src: url("assets/fonts/outfit.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; overflow: hidden; }
+
+    #e-bg { position: absolute; inset: 0; background: #2F4A3A; }
+    #e-brand { position: absolute; left: 130px; top: 190px; font: 800 34px/1 Outfit; letter-spacing: .16em; text-transform: uppercase; color: #FFC48A; }
+    #e-brand span { display: inline-block; width: 46px; height: 46px; margin-right: 16px; border-radius: 12px; background: #C4623F; color: #fff; text-align: center; font: 800 30px/46px Outfit; letter-spacing: 0; vertical-align: -8px; }
+    #e-h { position: absolute; left: 126px; top: 270px; width: 900px; font: 700 96px/1.04 Fraunces; color: #FBF7F0; letter-spacing: -.015em; }
+    #e-h em { color: #FFC48A; }
+    #e-btn { position: absolute; left: 130px; top: 640px; padding: 26px 44px; border-radius: 60px; background: #C4623F; color: #fff; font: 800 38px/1 Outfit; box-shadow: 0 16px 34px rgba(0,0,0,.28); transform-origin: 0 50%; }
+    .e-c { position: absolute; left: 132px; font: 500 38px/1 Outfit; color: #FBF7F0; }
+    .e-c b { color: #FFC48A; font-weight: 700; margin-right: 14px; }
+    #e-shot { position: absolute; left: 1150px; top: 120px; width: 620px; height: 780px; border-radius: 22px; overflow: hidden; background: url("assets/shots/b5.jpg");
+      background-size: 2150.4px 1128.96px; background-position: -730.64px -145.2px; box-shadow: 0 30px 80px rgba(0,0,0,.4); }
+  </style>
+  <div id="root" data-composition-id="endcard" data-width="1920" data-height="1080" data-layout-allow-overflow data-layout-allow-overlap>
+
+    <div id="e-bg"></div>
+    <div id="e-shot"></div>
+    <div id="e-brand"><span>D</span>Delta Web</div>
+    <div id="e-h">Want a website that <em>books calls?</em></div>
+    <div id="e-btn">Talk to Delta Web →</div>
+    <div class="e-c" style="top:790px"><b>Web</b>createyourbestsite.com</div>
+    <div class="e-c" style="top:860px"><b>Email</b>admin@createyourbestsite.com</div>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#e-bg",{clipPath:"circle(0% at 50% 50%)"},{clipPath:"circle(75% at 50% 50%)",duration:.8,ease:"power3.inOut"},0);
+tl.fromTo("#e-shot",{opacity:0,x:80,rotation:5},{opacity:1,x:0,rotation:2.5,duration:.9,ease:"power4.out"},0.5);
+tl.fromTo("#e-brand",{opacity:0,y:30},{opacity:1,y:0,duration:.5,ease:"power3.out"},0.6);
+tl.fromTo("#e-h",{opacity:0,y:50},{opacity:1,y:0,duration:.65,ease:"power4.out"},0.9);
+tl.fromTo("#e-btn",{opacity:0,scale:.7},{opacity:1,scale:1,duration:.5,ease:"back.out(2.2)"},3.3);
+tl.fromTo(".e-c",{opacity:0,x:-30},{opacity:1,x:0,duration:.45,ease:"power3.out",stagger:.2},3.7);
+tl.to("#e-btn",{scale:1.05,duration:.5,yoyo:true,repeat:3,ease:"sine.inOut"},4.3);
+    window.__timelines["endcard"] = tl;
+  </script>
+</template>

@@ -1,0 +1,339 @@
+@import "tailwindcss";
+
+/*
+  Wrenfield Nutrition design tokens.
+  Contrast ratios verified against WCAG 2.2 AA (normal text needs 4.5:1):
+  sage #2F4A3A on cream #FBF7F0 ............ 9.10:1
+  sage #2F4A3A on wheat #F2E6CF ............ 7.86:1
+  white #FFFFFF on clay #B0522F ............ 5.13:1  (primary action)
+  cream #FBF7F0 on sage #2F4A3A ............ 9.10:1
+  olive-deep #5A683D on cream .............. 5.65:1  (small caps / captions)
+  olive-deep #5A683D on wheat .............. 5.90:1
+  cocoa #5C4A38 on cream ................... 6.70:1  (secondary copy)
+  leaf-deep #2A6B45 on leaf-wash #E8F2E6 ... 5.56:1  (success state)
+  clay-deep #8C3F22 on clay-wash #F8E9E1 ... 6.20:1
+  Decor-only accents (never sole carrier of text): olive #7C8B5A, terracotta #C4623F, leaf #3E8E5E.
+*/
+@theme {
+  --color-cream: #fbf7f0;
+  --color-cream-deep: #f5eee1;
+  --color-wheat: #f2e6cf;
+  --color-wheat-deep: #e6d7ba;
+  --color-sage: #2f4a3a;
+  --color-sage-soft: #476050;
+  --color-sage-wash: #edf1ea;
+  --color-clay: #b0522f;
+  --color-clay-deep: #96401f;
+  --color-clay-wash: #f8e9e1;
+  --color-clay-text: #8c3f22;
+  --color-terracotta: #c4623f;
+  --color-olive: #7c8b5a;
+  --color-olive-deep: #5a683d;
+  --color-leaf: #3e8e5e;
+  --color-leaf-deep: #2a6b45;
+  --color-leaf-wash: #e8f2e6;
+  --color-cocoa: #5c4a38;
+  --color-line: #e3d8c4;
+  --color-line-strong: #c4b49a;
+  /* Form boundaries: 4.09:1 on the field fill, above the 3:1 UI requirement. */
+  --color-field-line: #8b7a62;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia,
+    "Times New Roman", serif;
+  --shadow-card: 0 1px 2px rgba(47, 74, 58, 0.05), 0 12px 28px -18px rgba(47, 74, 58, 0.28);
+  --shadow-lift: 0 2px 4px rgba(47, 74, 58, 0.06), 0 22px 44px -24px rgba(47, 74, 58, 0.34);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-sage);
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    color: var(--color-sage);
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background-color: var(--color-wheat);
+    color: var(--color-sage);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-clay);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Scoped form control base: width is left to components so radios/checks
+     never stretch. Colours are inherited from utility classes. */
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: var(--color-clay);
+    flex: 0 0 auto;
+  }
+
+  svg {
+    flex: 0 0 auto;
+  }
+}
+
+@layer components {
+  .container-editorial {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-editorial {
+      padding-inline: 2rem;
+    }
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-olive-deep);
+  }
+
+  .field-label {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-sage);
+    margin-bottom: 0.375rem;
+  }
+
+  .field-control {
+    display: block;
+    width: 100%;
+    min-height: 2.875rem;
+    border-radius: 0.75rem;
+    border: 1.5px solid var(--color-field-line);
+    background-color: #fffdf9;
+    padding: 0.625rem 0.8125rem;
+    color: var(--color-sage);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .field-control::placeholder {
+    color: #766a58;
+  }
+
+  .field-control:hover {
+    border-color: var(--color-olive);
+  }
+
+  .field-control[aria-invalid="true"] {
+    border-color: var(--color-clay-text);
+    background-color: #fff8f4;
+    box-shadow: inset 0 0 0 1px var(--color-clay-text);
+  }
+
+  select.field-control {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--color-sage) 50%),
+      linear-gradient(135deg, var(--color-sage) 50%, transparent 50%);
+    background-position: calc(100% - 1.15rem) 1.25rem, calc(100% - 0.8rem) 1.25rem;
+    background-size: 0.35rem 0.35rem, 0.35rem 0.35rem;
+    background-repeat: no-repeat;
+    padding-right: 2.4rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.875rem;
+    border-radius: 999px;
+    padding: 0.7rem 1.35rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+  }
+
+  .btn-primary {
+    background-color: var(--color-clay);
+    color: #ffffff;
+    border: 1.5px solid var(--color-clay);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-clay-deep);
+    border-color: var(--color-clay-deep);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--color-sage);
+    border: 1.5px solid var(--color-line-strong);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-wheat);
+    border-color: var(--color-olive);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--color-sage);
+    border: 1.5px solid transparent;
+    text-decoration: underline;
+    text-decoration-color: var(--color-terracotta);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
+  }
+
+  .btn-ghost:hover {
+    color: var(--color-clay-text);
+    text-decoration-thickness: 2px;
+  }
+
+  .card-soft {
+    background-color: #fffdf9;
+    border: 1px solid var(--color-line);
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  .link-inline {
+    color: var(--color-clay-text);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+
+  .link-inline:hover {
+    color: var(--color-sage);
+  }
+
+  /* Native radio/checkbox rendered as a card: control stays inline sized. */
+  .choice {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+    border-radius: 0.9rem;
+    border: 1.5px solid var(--color-line);
+    background-color: #fffdf9;
+    padding: 0.85rem 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 160ms ease, background-color 160ms ease;
+  }
+
+  .choice:hover {
+    border-color: var(--color-olive);
+    background-color: #fffaf1;
+  }
+
+  .choice:has(input:checked) {
+    border-color: var(--color-sage);
+    background-color: var(--color-sage-wash);
+  }
+
+  .choice:has(input:focus-visible) {
+    outline: 3px solid var(--color-clay);
+    outline-offset: 2px;
+  }
+
+  .choice input[type="radio"],
+  .choice input[type="checkbox"] {
+    width: 1.15rem;
+    height: 1.15rem;
+    margin-top: 0.15rem;
+  }
+
+  /* Self-contained skip link: hidden until focused, then fully visible. */
+  .skip-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .skip-link:focus {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 120;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0.75rem 1.15rem;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    white-space: nowrap;
+    background-color: var(--color-sage);
+    color: var(--color-cream);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-lift);
+  }
+
+  .dialogue-panel {
+    background-color: var(--color-cream);
+    border-radius: 1.25rem;
+    border: 1px solid var(--color-line);
+    box-shadow: 0 30px 90px -30px rgba(24, 38, 29, 0.55);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

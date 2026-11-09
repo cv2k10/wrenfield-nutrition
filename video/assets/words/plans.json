@@ -1,0 +1,122 @@
+[
+  {
+    "id": "w0",
+    "text": "Prices",
+    "start": 0,
+    "end": 0.4
+  },
+  {
+    "id": "w1",
+    "text": "sit",
+    "start": 0.56,
+    "end": 0.8
+  },
+  {
+    "id": "w2",
+    "text": "right",
+    "start": 0.8,
+    "end": 1.04
+  },
+  {
+    "id": "w3",
+    "text": "on",
+    "start": 1.04,
+    "end": 1.2
+  },
+  {
+    "id": "w4",
+    "text": "the",
+    "start": 1.2,
+    "end": 1.44
+  },
+  {
+    "id": "w5",
+    "text": "page,",
+    "start": 1.44,
+    "end": 2
+  },
+  {
+    "id": "w6",
+    "text": "and",
+    "start": 2,
+    "end": 2.24
+  },
+  {
+    "id": "w7",
+    "text": "each",
+    "start": 2.24,
+    "end": 2.56
+  },
+  {
+    "id": "w8",
+    "text": "plan",
+    "start": 2.56,
+    "end": 2.88
+  },
+  {
+    "id": "w9",
+    "text": "opens",
+    "start": 2.96,
+    "end": 3.36
+  },
+  {
+    "id": "w10",
+    "text": "a",
+    "start": 3.36,
+    "end": 3.44
+  },
+  {
+    "id": "w11",
+    "text": "week",
+    "start": 3.44,
+    "end": 3.76
+  },
+  {
+    "id": "w12",
+    "text": "by",
+    "start": 3.76,
+    "end": 4
+  },
+  {
+    "id": "w13",
+    "text": "week",
+    "start": 4,
+    "end": 4.32
+  },
+  {
+    "id": "w14",
+    "text": "outline",
+    "start": 4.32,
+    "end": 4.88
+  },
+  {
+    "id": "w15",
+    "text": "with",
+    "start": 4.88,
+    "end": 5.12
+  },
+  {
+    "id": "w16",
+    "text": "its",
+    "start": 5.12,
+    "end": 5.28
+  },
+  {
+    "id": "w17",
+    "text": "own",
+    "start": 5.28,
+    "end": 5.52
+  },
+  {
+    "id": "w18",
+    "text": "booking",
+    "start": 5.52,
+    "end": 6
+  },
+  {
+    "id": "w19",
+    "text": "button.",
+    "start": 6,
+    "end": 6.4
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wrenfield-nutrition",
+  "account_id": "ed7bc2fd0dfb16c182579349b9bdd9ee",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "out",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "kv_namespaces": [
+    { "binding": "REQUESTS", "id": "3a80e25ed1c74122a3fb5058389e318a" }
+  ],
+  "send_email": [{ "name": "EMAIL", "destination_address": "cv2k10@gmail.com" }],
+  "observability": { "enabled": true }
+}

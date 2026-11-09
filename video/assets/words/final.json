@@ -1,0 +1,56 @@
+[
+  {
+    "id": "w0",
+    "text": "and",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "every",
+    "start": 0.24,
+    "end": 0.56
+  },
+  {
+    "id": "w2",
+    "text": "path",
+    "start": 0.56,
+    "end": 0.88
+  },
+  {
+    "id": "w3",
+    "text": "leads",
+    "start": 0.88,
+    "end": 1.2
+  },
+  {
+    "id": "w4",
+    "text": "to",
+    "start": 1.2,
+    "end": 1.36
+  },
+  {
+    "id": "w5",
+    "text": "one",
+    "start": 1.36,
+    "end": 1.6
+  },
+  {
+    "id": "w6",
+    "text": "short",
+    "start": 1.6,
+    "end": 1.84
+  },
+  {
+    "id": "w7",
+    "text": "booking",
+    "start": 1.84,
+    "end": 2.32
+  },
+  {
+    "id": "w8",
+    "text": "form.",
+    "start": 2.32,
+    "end": 2.64
+  }
+]

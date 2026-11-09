@@ -1,0 +1,74 @@
+[
+  {
+    "id": "w0",
+    "text": "Want",
+    "start": 0,
+    "end": 0.32
+  },
+  {
+    "id": "w1",
+    "text": "a",
+    "start": 0.32,
+    "end": 0.48
+  },
+  {
+    "id": "w2",
+    "text": "website",
+    "start": 0.48,
+    "end": 0.88
+  },
+  {
+    "id": "w3",
+    "text": "that",
+    "start": 0.88,
+    "end": 1.12
+  },
+  {
+    "id": "w4",
+    "text": "turns",
+    "start": 1.12,
+    "end": 1.44
+  },
+  {
+    "id": "w5",
+    "text": "visitors",
+    "start": 1.44,
+    "end": 1.92
+  },
+  {
+    "id": "w6",
+    "text": "into",
+    "start": 1.92,
+    "end": 2.16
+  },
+  {
+    "id": "w7",
+    "text": "booked",
+    "start": 2.16,
+    "end": 2.56
+  },
+  {
+    "id": "w8",
+    "text": "calls.",
+    "start": 2.56,
+    "end": 3.2
+  },
+  {
+    "id": "w9",
+    "text": "Talk",
+    "start": 3.2,
+    "end": 3.68
+  },
+  {
+    "id": "w10",
+    "text": "Delta",
+    "start": 3.68,
+    "end": 4.08
+  },
+  {
+    "id": "w11",
+    "text": "Web.",
+    "start": 4.24,
+    "end": 4.56
+  }
+]

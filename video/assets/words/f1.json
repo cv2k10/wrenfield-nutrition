@@ -1,0 +1,56 @@
+[
+  {
+    "id": "w0",
+    "text": "Step",
+    "start": 0.08,
+    "end": 0.32
+  },
+  {
+    "id": "w1",
+    "text": "one",
+    "start": 0.32,
+    "end": 0.56
+  },
+  {
+    "id": "w2",
+    "text": "where",
+    "start": 0.72,
+    "end": 0.8
+  },
+  {
+    "id": "w3",
+    "text": "they",
+    "start": 0.96,
+    "end": 1.04
+  },
+  {
+    "id": "w4",
+    "text": "are",
+    "start": 1.04,
+    "end": 1.2
+  },
+  {
+    "id": "w5",
+    "text": "and",
+    "start": 1.28,
+    "end": 1.52
+  },
+  {
+    "id": "w6",
+    "text": "their",
+    "start": 1.52,
+    "end": 1.76
+  },
+  {
+    "id": "w7",
+    "text": "main",
+    "start": 1.76,
+    "end": 2
+  },
+  {
+    "id": "w8",
+    "text": "concern.",
+    "start": 2,
+    "end": 2.56
+  }
+]

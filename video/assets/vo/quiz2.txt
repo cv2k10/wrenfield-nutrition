@@ -1,0 +1,1 @@
+Every visitor gets a score, their three weakest areas, and the plan that fits. One button carries all of it into the booking form.

@@ -1,0 +1,295 @@
+<template>
+  <style>
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces-italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; }
+    @font-face { font-family: "Outfit"; src: url("assets/fonts/outfit.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; overflow: hidden; }
+
+    #root { background: #1F3328; }
+    #bar { position: absolute; left: 0; top: 0; width: 1920px; height: 72px; background: #EFE7D9; border-bottom: 1px solid #DCD0BC; }
+    .dot { position: absolute; top: 30px; width: 14px; height: 14px; border-radius: 50%; }
+    #url { position: absolute; left: 50%; top: 18px; width: 640px; margin-left: -320px; height: 38px; border-radius: 19px; background: #FFFDF8;
+      border: 1px solid #DCD0BC; font: 500 19px/38px Outfit; color: #2F4A3A; text-align: center; letter-spacing: .01em; }
+    #url svg { vertical-align: -3px; margin-right: 8px; }
+    #segs { position: absolute; right: 36px; top: 31px; display: flex; gap: 6px; }
+    .seg { width: 46px; height: 8px; border-radius: 4px; background: #D9CDB8; overflow: hidden; }
+    .seg i { display: block; width: 100%; height: 100%; background: #C4623F; transform: scaleX(0); transform-origin: 0 50%; }
+    #view { position: absolute; left: 0; top: 72px; width: 1920px; height: 1008px; overflow: hidden; background: #FBF7F0; }
+    #cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1008px; transform-origin: 0 0; }
+    #plate { position: absolute; left: 0; top: 0; width: 1920px; }
+    #hdr { position: absolute; left: 0; top: 0; width: 1920px; opacity: 0; }
+    .state { position: absolute; left: 0; top: 0; width: 1920px; height: 1008px; opacity: 0; }
+    #spot { position: absolute; left: 0; top: 0; width: 100px; height: 100px; opacity: 0; border-radius: 18px;
+      box-shadow: 0 0 0 4000px rgba(24,38,30,.48), 0 0 0 4px #C4623F inset; }
+    #cur { position: absolute; left: 0; top: 0; opacity: 0; width: 34px; height: 44px; }
+    .rip { position: absolute; left: 0; top: 0; width: 60px; height: 60px; border-radius: 50%; border: 5px solid #C4623F; opacity: 0; }
+    .stk { position: absolute; left: 70px; top: 106px; opacity: 0; padding: 14px 26px 14px 18px; border-radius: 14px; background: #C4623F; color: #fff;
+      font: 800 34px/1 Outfit; letter-spacing: .02em; text-transform: uppercase; box-shadow: 0 10px 24px rgba(31,51,40,.35); transform-origin: 0 50%; }
+    .stk b { display: inline-block; margin-right: 14px; padding: 6px 10px; border-radius: 8px; background: #FBF7F0; color: #C4623F; font: 800 24px/1 Outfit; vertical-align: 4px; }
+    #plateWipe { position: absolute; left: 0; top: 0; width: 120px; height: 120px; border-radius: 50%; background: #C4623F; opacity: 0; }
+    #bump1 { position: absolute; left: 0; right: 0; top: 380px; text-align: center; font: italic 600 112px/1.05 Fraunces; color: #FBF7F0; opacity: 0; }
+    #bump2 { position: absolute; left: 0; right: 0; top: 540px; text-align: center; font: 700 40px/1 Outfit; letter-spacing: .14em; text-transform: uppercase; color: #F2E6CF; opacity: 0; }
+  </style>
+  <div id="root" data-composition-id="site" data-width="1920" data-height="1080" data-layout-allow-overflow data-layout-allow-overlap>
+
+    <div id="bar">
+      <span class="dot" style="left:28px;background:#E0705A"></span><span class="dot" style="left:52px;background:#E3B04B"></span><span class="dot" style="left:76px;background:#6FAE6A"></span>
+      <div id="url"><svg width="16" height="18" viewBox="0 0 16 18"><rect x="1.5" y="8" width="13" height="9" rx="2" fill="#2F4A3A"/><path d="M4.5 8V5.5a3.5 3.5 0 0 1 7 0V8" fill="none" stroke="#2F4A3A" stroke-width="2"/></svg>www.wrenfieldnutrition.demo</div>
+      <div id="segs"><div class="seg" id="seg0"><i></i></div><div class="seg" id="seg1"><i></i></div><div class="seg" id="seg2"><i></i></div><div class="seg" id="seg3"><i></i></div><div class="seg" id="seg4"><i></i></div><div class="seg" id="seg5"><i></i></div><div class="seg" id="seg6"><i></i></div></div>
+    </div>
+    <div id="view">
+      <div id="cam">
+        <img id="plate" src="assets/shots/plate.jpg" alt="">
+        <img id="hdr" src="assets/shots/header.png" alt="" style="height:65px">
+        <img id="s-hero" class="state" src="assets/shots/hero.jpg" alt="">
+        <img id="s-sf_open" class="state" src="assets/shots/sf_open.jpg" alt="">
+        <img id="s-quiz_q1" class="state" src="assets/shots/quiz_q1.jpg" alt="">
+        <img id="s-quiz_q1_sel" class="state" src="assets/shots/quiz_q1_sel.jpg" alt="">
+        <img id="s-quiz_q4_sel" class="state" src="assets/shots/quiz_q4_sel.jpg" alt="">
+        <img id="s-quiz_res1" class="state" src="assets/shots/quiz_res1.jpg" alt="">
+        <img id="s-quiz_res2" class="state" src="assets/shots/quiz_res2.jpg" alt="">
+        <img id="s-plans" class="state" src="assets/shots/plans.jpg" alt="">
+        <img id="s-plan_dialog" class="state" src="assets/shots/plan_dialog.jpg" alt="">
+        <img id="s-guide_filled" class="state" src="assets/shots/guide_filled.jpg" alt="">
+        <img id="s-guide_done" class="state" src="assets/shots/guide_done.jpg" alt="">
+        <img id="s-final" class="state" src="assets/shots/final.jpg" alt="">
+        <img id="s-b1" class="state" src="assets/shots/b1.jpg" alt="">
+        <img id="s-b1_err" class="state" src="assets/shots/b1_err.jpg" alt="">
+        <img id="s-b1_ok" class="state" src="assets/shots/b1_ok.jpg" alt="">
+        <img id="s-b2" class="state" src="assets/shots/b2.jpg" alt="">
+        <img id="s-b2_ok" class="state" src="assets/shots/b2_ok.jpg" alt="">
+        <img id="s-b3" class="state" src="assets/shots/b3.jpg" alt="">
+        <img id="s-b3_ok" class="state" src="assets/shots/b3_ok.jpg" alt="">
+        <img id="s-b4" class="state" src="assets/shots/b4.jpg" alt="">
+        <img id="s-b5" class="state" src="assets/shots/b5.jpg" alt="">
+        <div id="spot"></div>
+        <div class="rip" id="rip0"></div><div class="rip" id="rip1"></div><div class="rip" id="rip2"></div><div class="rip" id="rip3"></div><div class="rip" id="rip4"></div><div class="rip" id="rip5"></div><div class="rip" id="rip6"></div><div class="rip" id="rip7"></div><div class="rip" id="rip8"></div><div class="rip" id="rip9"></div><div class="rip" id="rip10"></div><div class="rip" id="rip11"></div><div class="rip" id="rip12"></div><div class="rip" id="rip13"></div><div class="rip" id="rip14"></div>
+        <svg id="cur" viewBox="0 0 34 44"><path d="M3 2 L3 34 L11 27 L17 41 L23 38 L17 25 L28 25 Z" fill="#1F3328" stroke="#FFFDF8" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+    <div class="stk" id="stk0"><b>01</b>The hook</div>
+    <div class="stk" id="stk1"><b>02</b>Pain points</div>
+    <div class="stk" id="stk2"><b>03</b>Lead magnet</div>
+    <div class="stk" id="stk3"><b>04</b>Trust</div>
+    <div class="stk" id="stk4"><b>05</b>Clear pricing</div>
+    <div class="stk" id="stk5"><b>06</b>Email capture</div>
+    <div class="stk" id="stk6"><b>07</b>Booking funnel</div>
+    <div id="plateWipe"></div>
+    <div id="bump1">One short form.</div>
+    <div id="bump2">4 steps · review · done</div>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+tl.set("#s-hero",{opacity:1},0);
+tl.fromTo("#stk0",{opacity:0,scale:0.6,rotation:-14},{opacity:1,scale:1,rotation:-4,duration:0.45,ease:"back.out(2.4)"},0.5);
+tl.to("#seg0 i",{scaleX:1,duration:0.6,ease:"power2.out"},0.5);
+tl.to("#spot",{x:386,y:201.4,width:580,height:303.2,opacity:1,duration:0.45,ease:"power3.out"},5.46);
+tl.to("#spot",{x:392,y:634.6,width:474.1,height:76,opacity:1,duration:0.45,ease:"power3.out"},8.1);
+tl.set("#cur",{x:751.4,y:852.6},8.3);
+tl.to("#cur",{opacity:1,duration:0.25},8.3);
+tl.to("#cur",{x:491.4,y:672.6,duration:0.8,ease:"power2.inOut"},8.3);
+tl.to("#cur",{x:718.45,y:672.6,duration:0.6,ease:"power2.inOut"},11.22);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},12.61);
+tl.set("#s-hero",{opacity:0},12.86);
+tl.set("#plate",{y:0},12.86);
+tl.set("#hdr",{opacity:1},13.11);
+tl.to("#plate",{y:-839,duration:1.3,ease:"power2.inOut"},12.86);
+tl.fromTo("#stk1",{opacity:0,scale:0.6,rotation:-14},{opacity:1,scale:1,rotation:-4,duration:0.45,ease:"back.out(2.4)"},13.46);
+tl.to("#stk0",{opacity:0,y:-20,duration:0.2,ease:"power2.in"},13.16);
+tl.to("#seg1 i",{scaleX:1,duration:0.6,ease:"power2.out"},13.46);
+tl.to("#spot",{x:392,y:350,width:1136,height:249,opacity:1,duration:0.45,ease:"power3.out"},14.21);
+tl.to("#cur",{x:680,y:511.25,duration:0.6,ease:"power2.inOut"},14.55);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},15.89);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},15.94);
+tl.set("#rip0",{x:650,y:481.25,opacity:0.9,scale:0.3},15.94);
+tl.to("#rip0",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},15.94);
+tl.to("#s-sf_open",{opacity:1,duration:0.18,ease:"power1.inOut"},15.99);
+tl.to("#spot",{x:398,y:355.8,width:1124,height:669.7,opacity:1,duration:0.45,ease:"power3.out"},17.89);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},21.37);
+tl.to("#s-sf_open",{opacity:0,duration:0.2},21.52);
+tl.to("#plate",{y:-2149,duration:1.3,ease:"power2.inOut"},21.62);
+tl.fromTo("#stk2",{opacity:0,scale:0.6,rotation:-14},{opacity:1,scale:1,rotation:-4,duration:0.45,ease:"back.out(2.4)"},22.22);
+tl.to("#stk1",{opacity:0,y:-20,duration:0.2,ease:"power2.in"},21.92);
+tl.to("#seg2 i",{scaleX:1,duration:0.6,ease:"power2.out"},22.22);
+tl.set("#s-quiz_q1",{opacity:1},22.82);
+tl.to("#spot",{x:561,y:184.4,width:798,height:527.5,opacity:1,duration:0.45,ease:"power3.out"},23.03);
+tl.to("#cur",{x:960,y:470.65,duration:0.5,ease:"power2.inOut"},24.63);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},25.13);
+tl.set("#rip1",{x:930,y:440.65,opacity:0.9,scale:0.3},25.13);
+tl.to("#rip1",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},25.13);
+tl.set("#s-quiz_q1_sel",{opacity:1},25.18);
+tl.set("#s-quiz_q1",{opacity:0},25.2);
+tl.to("#cur",{x:1261.25,y:657.9,duration:0.45,ease:"power2.inOut"},25.83);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},26.52);
+tl.set("#rip2",{x:1231.25,y:627.9,opacity:0.9,scale:0.3},26.52);
+tl.to("#rip2",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},26.52);
+tl.to("#s-quiz_q4_sel",{opacity:1,duration:0.15,ease:"power1.inOut"},27.06);
+tl.set("#s-quiz_q1_sel",{opacity:0},27.23);
+tl.to("#spot",{x:561,y:184.4,width:798,height:564.4,opacity:1,duration:0.45,ease:"power3.out"},27.06);
+tl.to("#cur",{x:1261.25,y:694.8,duration:0.4,ease:"power2.inOut"},27.31);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},27.74);
+tl.set("#rip3",{x:1231.25,y:664.8,opacity:0.9,scale:0.3},27.74);
+tl.to("#rip3",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},27.74);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},27.79);
+tl.to("#s-quiz_res1",{opacity:1,duration:0.25,ease:"power1.inOut"},27.99);
+tl.set("#s-quiz_q4_sel",{opacity:0},28.26);
+tl.to("#cur",{opacity:0,duration:0.25},27.99);
+tl.to("#cam",{x:-432,y:0,scale:1.45,duration:0.9,ease:"power3.inOut"},29.59);
+tl.to("#cam",{x:-432,y:-453.6,scale:1.45,duration:1,ease:"power3.inOut"},30.97);
+tl.to("#s-quiz_res2",{opacity:1,duration:0.3,ease:"power1.inOut"},32.62);
+tl.set("#s-quiz_res1",{opacity:0},32.94);
+tl.to("#cam",{x:-480,y:0,scale:1.5,duration:0.9,ease:"power3.inOut"},32.62);
+tl.to("#spot",{x:747.5,y:415,width:295.9,height:64,opacity:1,duration:0.45,ease:"power3.out"},34.43);
+tl.set("#cur",{x:1155.45,y:627},34.53);
+tl.to("#cur",{opacity:1,duration:0.25},34.53);
+tl.to("#cur",{x:895.45,y:447,duration:0.8,ease:"power2.inOut"},34.53);
+tl.to("#cam",{x:0,y:0,scale:1,duration:0.8,ease:"power3.inOut"},37.15);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},37.15);
+tl.to("#cur",{opacity:0,duration:0.25},37.15);
+tl.set("#plate",{y:-2149},37.55);
+tl.to("#s-quiz_res2",{opacity:0,duration:0.3},37.55);
+tl.to("#plate",{y:-2674,duration:1.3,ease:"power2.inOut"},37.8);
+tl.fromTo("#stk3",{opacity:0,scale:0.6,rotation:-14},{opacity:1,scale:1,rotation:-4,duration:0.45,ease:"back.out(2.4)"},38.35);
+tl.to("#stk2",{opacity:0,y:-20,duration:0.2,ease:"power2.in"},38.05);
+tl.to("#seg3 i",{scaleX:1,duration:0.6,ease:"power2.out"},38.35);
+tl.to("#spot",{x:396,y:218,width:1128,height:624,opacity:1,duration:0.45,ease:"power3.out"},40.73);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},43.26);
+tl.to("#plate",{y:-3628,duration:1.1,ease:"power2.inOut"},43.36);
+tl.to("#spot",{x:394,y:316,width:1132,height:298,opacity:1,duration:0.45,ease:"power3.out"},44.06);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},47.3);
+tl.to("#plate",{y:-4390,duration:1.1,ease:"power2.inOut"},47.4);
+tl.fromTo("#stk4",{opacity:0,scale:0.6,rotation:-14},{opacity:1,scale:1,rotation:-4,duration:0.45,ease:"back.out(2.4)"},47.9);
+tl.to("#stk3",{opacity:0,y:-20,duration:0.2,ease:"power2.in"},47.6);
+tl.to("#seg4 i",{scaleX:1,duration:0.6,ease:"power2.out"},47.9);
+tl.to("#spot",{x:394,y:206,width:1132,height:498,opacity:1,duration:0.45,ease:"power3.out"},48.3);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},50.44);
+tl.set("#plate",{y:-4384},50.44);
+tl.set("#s-plans",{opacity:1},50.46);
+tl.set("#cur",{x:1142.85,y:827.3},50.44);
+tl.to("#cur",{opacity:1,duration:0.25},50.44);
+tl.to("#cur",{x:882.85,y:647.3,duration:0.8,ease:"power2.inOut"},50.44);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},51.31);
+tl.set("#rip4",{x:852.85,y:617.3,opacity:0.9,scale:0.3},51.31);
+tl.to("#rip4",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},51.31);
+tl.to("#s-plan_dialog",{opacity:1,duration:0.2,ease:"power1.inOut"},51.36);
+tl.set("#s-plans",{opacity:0},51.58);
+tl.to("#cur",{x:960,y:952,duration:0.6,ease:"power2.inOut"},53.52);
+tl.to("#cur",{opacity:0,duration:0.25},55);
+tl.to("#s-plan_dialog",{opacity:0,duration:0.25},55.1);
+tl.to("#plate",{y:-5817,duration:1.2,ease:"power2.inOut"},55.2);
+tl.to("#spot",{x:873,y:148,width:651,height:628,opacity:1,duration:0.45,ease:"power3.out"},57.04);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},57.93);
+tl.to("#plate",{y:-6602,duration:1,ease:"power2.inOut"},57.88);
+tl.to("#spot",{x:398,y:230,width:457,height:496,opacity:1,duration:0.45,ease:"power3.out"},58.38);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},59.45);
+tl.to("#plate",{y:-7728,duration:1.1,ease:"power2.inOut"},59.55);
+tl.fromTo("#stk5",{opacity:0,scale:0.6,rotation:-14},{opacity:1,scale:1,rotation:-4,duration:0.45,ease:"back.out(2.4)"},60.05);
+tl.to("#stk4",{opacity:0,y:-20,duration:0.2,ease:"power2.in"},59.75);
+tl.to("#seg5 i",{scaleX:1,duration:0.6,ease:"power2.out"},60.05);
+tl.to("#s-guide_filled",{opacity:1,duration:0.25,ease:"power1.inOut"},60.25);
+tl.to("#cam",{x:-638.4,y:-2.05,scale:1.35,duration:0.9,ease:"power3.inOut"},61.59);
+tl.set("#cur",{x:1504,y:724.5},63.19);
+tl.to("#cur",{opacity:1,duration:0.25},63.19);
+tl.to("#cur",{x:1244,y:544.5,duration:0.8,ease:"power2.inOut"},63.19);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},64.69);
+tl.set("#rip5",{x:1214,y:514.5,opacity:0.9,scale:0.3},64.69);
+tl.to("#rip5",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},64.69);
+tl.to("#s-guide_done",{opacity:1,duration:0.2,ease:"power1.inOut"},64.74);
+tl.set("#s-guide_filled",{opacity:0},64.96);
+tl.to("#cam",{x:0,y:0,scale:1,duration:0.8,ease:"power3.inOut"},65.32);
+tl.to("#cur",{opacity:0,duration:0.25},65.32);
+tl.set("#plate",{y:-7728},65.52);
+tl.to("#s-guide_done",{opacity:0,duration:0.2},65.52);
+tl.to("#plate",{y:-8482,duration:1,ease:"power2.inOut"},65.62);
+tl.to("#spot",{x:524,y:138,width:872,height:719,opacity:1,duration:0.45,ease:"power3.out"},66.27);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},68.61);
+tl.to("#plate",{y:-9325,duration:1,ease:"power2.inOut"},68.71);
+tl.fromTo("#stk6",{opacity:0,scale:0.6,rotation:-14},{opacity:1,scale:1,rotation:-4,duration:0.45,ease:"back.out(2.4)"},69.11);
+tl.to("#stk5",{opacity:0,y:-20,duration:0.2,ease:"power2.in"},68.81);
+tl.to("#seg6 i",{scaleX:1,duration:0.6,ease:"power2.out"},69.11);
+tl.set("#s-final",{opacity:1},69.61);
+tl.to("#spot",{x:737.8,y:525.1,width:216.8,height:68,opacity:1,duration:0.45,ease:"power3.out"},69.95);
+tl.set("#cur",{x:1106.2,y:739.1},69.95);
+tl.to("#cur",{opacity:1,duration:0.25},69.95);
+tl.to("#cur",{x:846.2,y:559.1,duration:0.8,ease:"power2.inOut"},69.95);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},72.61);
+tl.set("#rip6",{x:816.2,y:529.1,opacity:0.9,scale:0.3},72.61);
+tl.to("#rip6",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},72.61);
+tl.to("#spot",{opacity:0,duration:0.35,ease:"power2.in"},72.61);
+tl.set("#plateWipe",{x:786.2,y:499.1,scale:0,opacity:1},72.66);
+tl.to("#plateWipe",{scale:40,duration:0.75,ease:"power3.in"},72.66);
+tl.fromTo("#bump1",{opacity:0,y:40},{opacity:1,y:0,duration:0.45,ease:"power3.out"},73.26);
+tl.fromTo("#bump2",{opacity:0,y:30},{opacity:1,y:0,duration:0.45,ease:"power3.out"},73.51);
+tl.to("#cur",{opacity:0,duration:0.25},72.96);
+tl.set("#s-b1",{opacity:1},74.81);
+tl.set("#s-final",{opacity:0},74.83);
+tl.to("#cam",{x:-288,y:-151.26,scale:1.3,duration:0.01,ease:"power3.inOut"},74.8);
+tl.to("#bump1,#bump2",{opacity:0,duration:0.2},74.66);
+tl.to("#plateWipe",{scale:0,duration:0.6,ease:"power3.out"},74.86);
+tl.to("#cam",{x:-528,y:-147,scale:1.55,duration:0.8,ease:"power3.inOut"},75.93);
+tl.set("#cur",{x:1386.25,y:1026.5},77.41);
+tl.to("#cur",{opacity:1,duration:0.25},77.41);
+tl.to("#cur",{x:1126.25,y:846.5,duration:0.8,ease:"power2.inOut"},77.41);
+tl.to("#cam",{x:-528,y:-554.4,scale:1.55,duration:0.7,ease:"power3.inOut"},77.92);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},78.62);
+tl.set("#rip7",{x:1096.25,y:816.5,opacity:0.9,scale:0.3},78.62);
+tl.to("#rip7",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},78.62);
+tl.to("#s-b1_err",{opacity:1,duration:0.12,ease:"power1.inOut"},78.67);
+tl.set("#s-b1",{opacity:0},78.81);
+tl.to("#cam",{x:-480,y:-126,scale:1.5,duration:0.8,ease:"power3.inOut"},78.72);
+tl.to("#cur",{x:960,y:458.1,duration:0.6,ease:"power2.inOut"},80.78);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},81.85);
+tl.set("#rip8",{x:930,y:428.1,opacity:0.9,scale:0.3},81.85);
+tl.to("#rip8",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},81.85);
+tl.to("#s-b1_ok",{opacity:1,duration:0.15,ease:"power1.inOut"},81.9);
+tl.set("#s-b1_err",{opacity:0},82.07);
+tl.to("#cam",{x:-432,y:-366,scale:1.45,duration:0.8,ease:"power3.inOut"},82.05);
+tl.to("#cur",{x:1126.25,y:846.5,duration:0.6,ease:"power2.inOut"},82.25);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},82.9);
+tl.set("#rip9",{x:1096.25,y:816.5,opacity:0.9,scale:0.3},82.9);
+tl.to("#rip9",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},82.9);
+tl.to("#s-b2",{opacity:1,duration:0.15,ease:"power1.inOut"},82.95);
+tl.set("#s-b1_ok",{opacity:0},83.12);
+tl.to("#cam",{x:-528,y:-7.5,scale:1.55,duration:0.7,ease:"power3.inOut"},83);
+tl.to("#cur",{x:830.5,y:263.5,duration:0.5,ease:"power2.inOut"},84.21);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},84.41);
+tl.set("#rip10",{x:800.5,y:233.5,opacity:0.9,scale:0.3},84.41);
+tl.to("#rip10",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},84.41);
+tl.to("#s-b2_ok",{opacity:1,duration:0.12,ease:"power1.inOut"},84.92);
+tl.set("#s-b2",{opacity:0},85.06);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},84.97);
+tl.set("#rip11",{x:800.5,y:305.5,opacity:0.9,scale:0.3},84.97);
+tl.to("#rip11",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},84.97);
+tl.to("#cam",{x:-432,y:-453.6,scale:1.45,duration:0.7,ease:"power3.inOut"},85.79);
+tl.to("#cur",{x:1110.45,y:928.7,duration:0.55,ease:"power2.inOut"},85.89);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},86.59);
+tl.set("#rip12",{x:1080.45,y:898.7,opacity:0.9,scale:0.3},86.59);
+tl.to("#rip12",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},86.59);
+tl.to("#s-b3",{opacity:1,duration:0.15,ease:"power1.inOut"},86.64);
+tl.set("#s-b2_ok",{opacity:0},86.81);
+tl.to("#cam",{x:-480,y:-161.92,scale:1.5,duration:0.7,ease:"power3.inOut"},86.69);
+tl.to("#s-b3_ok",{opacity:1,duration:0.5,ease:"power1.inOut"},88.07);
+tl.set("#s-b3",{opacity:0},88.59);
+tl.to("#cur",{x:1128.45,y:770.3,duration:0.6,ease:"power2.inOut"},89.13);
+tl.to("#cam",{x:-480,y:-311.93,scale:1.5,duration:0.7,ease:"power3.inOut"},89.13);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},90.99);
+tl.set("#rip13",{x:1098.45,y:740.3,opacity:0.9,scale:0.3},90.99);
+tl.to("#rip13",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},90.99);
+tl.to("#s-b4",{opacity:1,duration:0.15,ease:"power1.inOut"},91.04);
+tl.set("#s-b3_ok",{opacity:0},91.21);
+tl.to("#cam",{x:-576,y:0,scale:1.6,duration:0.8,ease:"power3.inOut"},91.09);
+tl.to("#cur",{x:1150,y:236,duration:0.6,ease:"power2.inOut"},93.37);
+tl.to("#cam",{x:-432,y:-453.6,scale:1.45,duration:0.8,ease:"power3.inOut"},95.56);
+tl.to("#cur",{x:1127.1,y:928.7,duration:0.6,ease:"power2.inOut"},95.66);
+tl.to("#cur",{scale:0.82,duration:0.08,yoyo:true,repeat:1,transformOrigin:"0 0"},96.46);
+tl.set("#rip14",{x:1097.1,y:898.7,opacity:0.9,scale:0.3},96.46);
+tl.to("#rip14",{scale:1.6,opacity:0,duration:0.5,ease:"power2.out"},96.46);
+tl.to("#s-b5",{opacity:1,duration:0.2,ease:"power1.inOut"},96.51);
+tl.set("#s-b4",{opacity:0},96.73);
+tl.to("#cam",{x:-288,y:-151.13,scale:1.3,duration:0.8,ease:"power3.inOut"},96.56);
+tl.to("#cur",{opacity:0,duration:0.25},96.56);
+tl.to("#cam",{x:0,y:0,scale:1,duration:1,ease:"power3.inOut"},100.32);
+    window.__timelines["site"] = tl;
+  </script>
+</template>

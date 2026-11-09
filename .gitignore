@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+.next/
+out/
+.wrangler/
+.dev.vars*
+.env*
+__pycache__/
+*.tsbuildinfo
+next-env.d.ts
