@@ -1,0 +1,132 @@
+{
+ "states": {
+  "hero": {
+   "cta": {
+    "x": 16,
+    "y": 599.0,
+    "width": 166.8,
+    "height": 44
+   },
+   "quizcta": {
+    "x": 16,
+    "y": 655.0,
+    "width": 263.3,
+    "height": 44
+   }
+  },
+  "sf": {},
+  "sf_open": {
+   "card": {
+    "x": 17,
+    "y": 600.5,
+    "width": 356,
+    "height": 136.6
+   }
+  },
+  "quiz_q1": {
+   "form": {
+    "x": 17,
+    "y": 90.0,
+    "width": 356,
+    "height": 517.5
+   }
+  },
+  "quiz_q1_sel": {
+   "opt": {
+    "x": 37,
+    "y": 343.5,
+    "width": 316,
+    "height": 77.5
+   },
+   "next": {
+    "x": 253.5,
+    "y": 547.5,
+    "width": 99.5,
+    "height": 44
+   }
+  },
+  "res1": {},
+  "res2": {
+   "bring": {
+    "x": 57.1,
+    "y": 144.1,
+    "width": 275.9,
+    "height": 44
+   }
+  },
+  "b1": {
+   "dlg": {
+    "x": 0,
+    "y": 67.5,
+    "width": 390,
+    "height": 776.5
+   }
+  },
+  "b1_ok": {
+   "next": {
+    "x": 191.5,
+    "y": 783,
+    "width": 177.5,
+    "height": 44
+   }
+  },
+  "b2": {},
+  "b2_ok": {
+   "next": {
+    "x": 159.9,
+    "y": 783,
+    "width": 209.1,
+    "height": 44
+   }
+  },
+  "b3_ok": {},
+  "b3_ok2": {
+   "next": {
+    "x": 195.9,
+    "y": 783,
+    "width": 173.1,
+    "height": 44
+   }
+  },
+  "b4": {},
+  "b4_send": {
+   "send": {
+    "x": 193.2,
+    "y": 782,
+    "width": 175.8,
+    "height": 44
+   }
+  },
+  "b5": {},
+  "guide": {},
+  "guide_filled": {
+   "form": {
+    "x": 41,
+    "y": 271.2,
+    "width": 308,
+    "height": 444.2
+   },
+   "btn": {
+    "x": 41,
+    "y": 670.4,
+    "width": 308,
+    "height": 44
+   }
+  },
+  "guide_done": {}
+ },
+ "posts": [
+  "https://wrenfield-nutrition.createyourbestsite-cl.workers.dev/api/requests",
+  "https://wrenfield-nutrition.createyourbestsite-cl.workers.dev/api/guide"
+ ],
+ "plateH": 17121,
+ "y": {
+  "sf": 1350,
+  "quiz": 2457,
+  "plans": 6244,
+  "guide": 13037
+ },
+ "quizText": "THE PLATE CHECK \u00b7 2 MINUTES Is your plate keeping up with your appetite? Seven honest questions about how you're actually eating. You'll get a score out of 100, your three weakest spots, and a plan suggestion to match. Your result: Build the base Your Plate Check score is 17 OUT OF 100 Small appetite is crowding out the basics. Right now, eating less is also meaning eating less of what keeps you well \u2014 meals are irregular, and protein, fluids, or strength work are slipping. That is exactly what medication quiet does, and it is fixable with structure, not willpower. A short, focused reset beats",
+ "reviewText": "FREE FIT CALL Book a free fit call Step 4 of 4 \u00b7 Review Take a quick look before requesting \u2014 Edit jumps you right back. Plate Check: 17/100 \u00b7 Build the base \u00b7 suggested plan: Fresh Start Where you are Edit Stage Just started (first weeks) Main concern I'm losing weight but feel weaker Start Within two weeks Your goals Edit Goals Eat enough protein on a small appetite; Protect strength and muscle Preferences None noted Side-effect notes None added Plan interest Fresh Start Contact & time Edit Name Dana Rivera Email dana.rivera@example.com Phone \u2014 Best time Weekday (Mon\u2013Fri) \u00b7 Morning \u00b7 8\u201311 \u00b7 Eastern Time (ET) By requesting, you agree to be contacted about your request. We reply within two b",
+ "successText": "Request received, Dana Your request is in. Here's what happens next. Step 1: Your answers are with the coach Nothing else to do right now. Replies go to dana.rivera@example.com. Step 2: A coach replies within two business days With a video link for a Weekday (Mon\u2013Fri) morning \u00b7 8\u201311 slot (ET). Step 3: You meet for 15\u201320 minutes Questions welcome, fit decided together, zero pressure to book anything paid. Back to the site"
+}

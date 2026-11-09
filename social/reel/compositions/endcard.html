@@ -1,0 +1,37 @@
+<template>
+  <style>
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces-italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; }
+    @font-face { font-family: "Outfit"; src: url("assets/fonts/outfit.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; overflow: hidden; }
+
+    #wipe { position: absolute; inset: 0; background: radial-gradient(90% 60% at 50% 55%, #3B5C49, #1F3328); }
+    #mark { position: absolute; left: 0; right: 0; top: 640px; text-align: center; }
+    #mark .lead { font: 700 32px Outfit; letter-spacing: .16em; text-transform: uppercase; color: #F2E6CF; }
+    #mark .name { font: 700 190px/1 Fraunces; color: #FBF7F0; margin-top: 26px; }
+    #mark .name em { font-style: italic; color: #F4A57F; font-weight: 600; }
+    #mark .tag { font: 500 40px Outfit; color: rgba(251,247,240,.85); margin-top: 26px; }
+    .pill { position: absolute; left: 140px; right: 140px; border-radius: 999px; text-align: center; font: 700 44px Outfit; padding: 30px 0; }
+    #p1 { top: 1130px; background: #C4623F; color: #fff; }
+    #p2 { top: 1270px; background: rgba(251,247,240,.1); color: #FBF7F0; border: 3px solid rgba(251,247,240,.35); font-size: 38px; }
+    #note { position: absolute; left: 0; right: 0; top: 1440px; text-align: center; font: 400 26px Outfit; color: rgba(251,247,240,.6); }
+  </style>
+  <div id="root" data-composition-id="endcard" data-width="1080" data-height="1920" data-layout-allow-overflow data-layout-allow-overlap>
+
+    <div id="wipe">
+      <div id="mark"><div class="lead">Websites that book calls</div><div class="name">Delta <em>Web</em></div><div class="tag">Quiz · booking · lead alerts, built for you</div></div>
+      <div id="p1" class="pill">createyourbestsite.com</div>
+      <div id="p2" class="pill">admin@createyourbestsite.com</div>
+      <div id="note">Wrenfield Nutrition is a fictional business made for this demo.</div>
+    </div>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+tl.fromTo("#wipe",{clipPath:"circle(0% at 50% 100%)"},{clipPath:"circle(150% at 50% 100%)",duration:0.7,ease:"power3.inOut"},0);
+tl.fromTo("#mark",{y:60,opacity:0},{y:0,opacity:1,duration:0.6,ease:"power3.out"},0.55);
+tl.fromTo(".pill",{y:40,opacity:0},{y:0,opacity:1,duration:0.5,stagger:0.15,ease:"power2.out"},0.9);
+tl.fromTo("#note",{opacity:0},{opacity:1,duration:0.5},1.4);
+    window.__timelines["endcard"] = tl;
+  </script>
+</template>

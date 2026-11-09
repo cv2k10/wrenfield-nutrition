@@ -65,4 +65,5 @@ Review notes are in [video/REVIEW.md](video/REVIEW.md).
   - `option-B-desktop-full-page-3-pages.png` is the landscape version: three slices cut at section boundaries on a 3600×2250 sage canvas with a title panel (no Option or Arena wording).
 - `status/`: phone test evidence for both funnels, plus the web-build success screen.
 - `video/`: HyperFrames project (`capture.py`, `build.mjs`, `script.json`) and the final render.
+- `social/`: Facebook pieces made from the live production site: a 24.6 s 9:16 Reel (its own HyperFrames project), a 7-card 4:5 carousel, a device mockup, a lead-flow diagram and a before/after image. See [social/README.md](social/README.md).
 - `web-build/`: the working site, a static Next.js export plus a Cloudflare Worker with KV and email alerts. Deployed 2026-11-05; it passed 20/20 checks both locally and live. See [web-build/README.md](web-build/README.md).

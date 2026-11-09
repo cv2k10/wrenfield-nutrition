@@ -1,0 +1,323 @@
+<template>
+  <style>
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces.woff2") format("woff2"); font-weight: 100 900; }
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/fraunces-italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; }
+    @font-face { font-family: "Outfit"; src: url("assets/fonts/outfit.woff2") format("woff2"); font-weight: 100 900; }
+    #root { position: absolute; inset: 0; overflow: hidden; }
+
+    #root { background: radial-gradient(120% 70% at 50% 62%, #3B5C49 0%, #2F4A3A 45%, #1F3328 100%); }
+    .blob { position: absolute; border-radius: 50%; }
+    #blobA { left: -180px; top: 1180px; width: 640px; height: 640px; background: radial-gradient(circle, rgba(242,230,207,.13), rgba(242,230,207,0) 70%); }
+    #blobB { left: 620px; top: 420px; width: 720px; height: 720px; background: radial-gradient(circle, rgba(196,98,63,.16), rgba(196,98,63,0) 70%); }
+    #meter { position: absolute; left: 120px; top: 108px; width: 840px; height: 110px; }
+    #meter .track { position: absolute; left: 0; right: 0; top: 17px; height: 6px; border-radius: 3px; background: rgba(251,247,240,.18); }
+    #fill { position: absolute; left: 0; right: 0; top: 17px; height: 6px; border-radius: 3px; background: #C4623F; transform-origin: 0 50%; }
+    .stop { position: absolute; top: 0; width: 0; }
+    .dot { position: absolute; left: -20px; top: 0; width: 40px; height: 40px; border-radius: 50%; background: #1F3328; border: 4px solid rgba(251,247,240,.35); }
+    .lab { position: absolute; left: -100px; width: 200px; top: 54px; text-align: center; font: 700 30px Outfit; letter-spacing: .06em; text-transform: uppercase; color: rgba(251,247,240,.45); }
+    #phone { position: absolute; left: 290px; top: 610px; width: 500px; padding: 12px; border-radius: 66px; background: #141F18; box-shadow: 0 60px 120px -40px rgba(0,0,0,.65), 0 0 0 2px #33453A inset; transform-origin: 50% 0; }
+    .screen { position: relative; width: 100%; aspect-ratio: 390/844; border-radius: 54px; overflow: hidden; background: #fff; }
+    .shot { position: absolute; left: 0; top: 0; width: 100%; }
+    #phoneDim { position: absolute; inset: 0; background: #1F3328; opacity: 0; }
+    .ring { position: absolute; border: 5px solid #C4623F; border-radius: 20px; box-shadow: 0 0 0 9px rgba(196,98,63,.22); opacity: 0; }
+    .rip { position: absolute; left: -40px; top: -40px; width: 80px; height: 80px; border-radius: 50%; border: 5px solid #C4623F; opacity: 0; }
+    #root .finger { position: absolute; left: -34px; top: -34px; width: 68px; height: 68px; border-radius: 50%; background: rgba(255,255,255,.55); border: 4px solid rgba(31,51,40,.55); box-shadow: 0 8px 20px rgba(0,0,0,.25); opacity: 0; }
+    #mail { position: absolute; left: 80px; top: 1060px; width: 920px; background: #fff; border-radius: 34px; overflow: hidden; box-shadow: 0 50px 100px -30px rgba(0,0,0,.6); opacity: 0; }
+    #mail .bar { background: #C4623F; color: #fff; padding: 26px 36px; display: flex; align-items: center; gap: 18px; font: 700 32px Outfit; }
+    #mail .bar span:last-child { margin-left: auto; font-weight: 500; opacity: .85; }
+    #mail .body { padding: 30px 36px 34px; font-family: Outfit; color: #1F2A22; }
+    #mail .from { font-size: 26px; color: #6b756d; }
+    #mail .subj { font-weight: 700; font-size: 36px; line-height: 1.2; margin: 8px 0 22px; }
+    #mail table { width: 100%; border-collapse: collapse; font-size: 28px; line-height: 1.3; position: relative; }
+    #mail td { padding: 7px 0; vertical-align: top; }
+    #mail td:first-child { color: #6b756d; width: 230px; }
+    #mail tr.pc td { color: #C4623F; font-weight: 700; }
+    #mail tr.pc td:first-child { padding-left: 12px; border-radius: 12px 0 0 12px; } #mail tr.pc td:last-child { border-radius: 0 12px 12px 0; }
+    .tags { display: flex; gap: 14px; margin-top: 24px; }
+    .tags span { opacity: 0; transform: translateY(14px); background: #F2E6CF; border-radius: 999px; padding: 10px 20px; font-size: 25px; font-weight: 600; color: #2F4A3A; }
+  </style>
+  <div id="root" data-composition-id="journey" data-width="1080" data-height="1920" data-layout-allow-overflow data-layout-allow-overlap>
+
+    <div id="blobA" class="blob"></div>
+    <div id="blobB" class="blob"></div>
+    <div id="meter">
+      <div class="track"></div><div id="fill"></div>
+      <div class="stop" style="left:0px"><div id="dot0" class="dot"></div><div id="lab0" class="lab">Visit</div></div>
+      <div class="stop" style="left:280px"><div id="dot1" class="dot"></div><div id="lab1" class="lab">Quiz</div></div>
+      <div class="stop" style="left:560px"><div id="dot2" class="dot"></div><div id="lab2" class="lab">Book</div></div>
+      <div class="stop" style="left:840px"><div id="dot3" class="dot"></div><div id="lab3" class="lab">Inbox</div></div>
+    </div>
+    <div id="phone">
+      <div class="screen">
+        <img id="s-res1" class="shot" src="assets/shots/res1.png" style="opacity:1">
+        <img id="s-hero" class="shot" src="assets/shots/hero.png" style="opacity:0">
+        <img id="s-quiz_q1" class="shot" src="assets/shots/quiz_q1.png" style="opacity:0">
+        <img id="s-quiz_q1_sel" class="shot" src="assets/shots/quiz_q1_sel.png" style="opacity:0">
+        <img id="s-res2" class="shot" src="assets/shots/res2.png" style="opacity:0">
+        <img id="s-b1" class="shot" src="assets/shots/b1.png" style="opacity:0">
+        <img id="s-b1_ok" class="shot" src="assets/shots/b1_ok.png" style="opacity:0">
+        <img id="s-b2_ok" class="shot" src="assets/shots/b2_ok.png" style="opacity:0">
+        <img id="s-b3_ok2" class="shot" src="assets/shots/b3_ok2.png" style="opacity:0">
+        <img id="s-b4" class="shot" src="assets/shots/b4.png" style="opacity:0">
+        <img id="s-b4_send" class="shot" src="assets/shots/b4_send.png" style="opacity:0">
+        <img id="s-b5" class="shot" src="assets/shots/b5.png" style="opacity:0">
+        <div id="ring0" class="ring"></div>
+        <div id="ring1" class="ring"></div>
+        <div id="ring2" class="ring"></div>
+        <div id="ring3" class="ring"></div>
+        <div id="ring4" class="ring"></div>
+        <div id="ring5" class="ring"></div>
+        <div id="rip0" class="rip"></div><div id="finger0" class="finger"></div>
+        <div id="rip1" class="rip"></div><div id="finger1" class="finger"></div>
+        <div id="rip2" class="rip"></div><div id="finger2" class="finger"></div>
+        <div id="rip3" class="rip"></div><div id="finger3" class="finger"></div>
+        <div id="rip4" class="rip"></div><div id="finger4" class="finger"></div>
+        <div id="rip5" class="rip"></div><div id="finger5" class="finger"></div>
+        <div id="rip6" class="rip"></div><div id="finger6" class="finger"></div>
+        <div id="phoneDim"></div>
+      </div>
+    </div>
+    <div id="mail">
+      <div class="bar"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>New lead</span><span>just now</span></div>
+      <div class="body">
+        <div class="from">Wrenfield Nutrition website</div>
+        <div class="subj">New fit-call request from Dana Rivera: Fresh Start (Within two weeks)</div>
+        <table>
+          <tr class=""><td>Stage</td><td>Just started (first weeks)</td></tr>
+          <tr class=""><td>Main concern</td><td>I'm losing weight but feel weaker</td></tr>
+          <tr class="pc"><td>Plate Check</td><td>17/100, Build the base</td></tr>
+          <tr class=""><td>Best time</td><td>Weekday morning · 8–11 ET</td></tr>
+        </table>
+        <div class="tags"><span id="tag1">Saved to your lead list</span><span id="tag2">Reply goes to Dana</span></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.__timelines = window.__timelines || {};
+    const tl = gsap.timeline({ paused: true });
+tl.set("#fill",{scaleX:0},0);
+tl.fromTo("#phone",{scale:0.93,y:30},{scale:1,y:0,duration:0.6,ease:"power3.out"},0);
+tl.set("#s-res1",{opacity:1},0);
+tl.set("#s-hero",{opacity:0},0.01);
+tl.set("#s-quiz_q1",{opacity:0},0.01);
+tl.set("#s-quiz_q1_sel",{opacity:0},0.01);
+tl.set("#s-res2",{opacity:0},0.01);
+tl.set("#s-b1",{opacity:0},0.01);
+tl.set("#s-b1_ok",{opacity:0},0.01);
+tl.set("#s-b2_ok",{opacity:0},0.01);
+tl.set("#s-b3_ok2",{opacity:0},0.01);
+tl.set("#s-b4",{opacity:0},0.01);
+tl.set("#s-b4_send",{opacity:0},0.01);
+tl.set("#s-b5",{opacity:0},0.01);
+tl.set("#ring0",{left:65.23,top:53.03,width:345.54,height:369.95},0);
+tl.fromTo("#ring0",{opacity:0,scale:1.12},{opacity:1,scale:1,duration:0.28,ease:"back.out(2)"},0.99);
+tl.to("#ring0",{opacity:0,duration:0.2},3.14);
+tl.fromTo("#s-hero",{opacity:0},{opacity:1,duration:0.2,ease:"power1.out"},3.24);
+tl.set("#s-res1",{opacity:0},3.45);
+tl.set("#s-quiz_q1",{opacity:0},3.45);
+tl.set("#s-quiz_q1_sel",{opacity:0},3.45);
+tl.set("#s-res2",{opacity:0},3.45);
+tl.set("#s-b1",{opacity:0},3.45);
+tl.set("#s-b1_ok",{opacity:0},3.45);
+tl.set("#s-b2_ok",{opacity:0},3.45);
+tl.set("#s-b3_ok2",{opacity:0},3.45);
+tl.set("#s-b4",{opacity:0},3.45);
+tl.set("#s-b4_send",{opacity:0},3.45);
+tl.set("#s-b5",{opacity:0},3.45);
+tl.to("#fill",{scaleX:0,duration:0.5,ease:"power2.inOut"},3.24);
+tl.to("#dot0",{backgroundColor:"#C4623F",borderColor:"#C4623F",scale:1.18,duration:0.3,ease:"back.out(3)"},3.54);
+tl.to("#lab0",{color:"#FBF7F0",duration:0.3},3.54);
+tl.set("#ring1",{left:1.76,top:719.43,width:304.04,height:147.82},0);
+tl.fromTo("#ring1",{opacity:0,scale:1.12},{opacity:1,scale:1,duration:0.28,ease:"back.out(2)"},4.09);
+tl.to("#ring1",{opacity:0,duration:0.2},4.92);
+tl.fromTo("#s-quiz_q1",{opacity:0},{opacity:1,duration:0.2,ease:"power1.out"},5.02);
+tl.set("#s-res1",{opacity:0},5.23);
+tl.set("#s-hero",{opacity:0},5.23);
+tl.set("#s-quiz_q1_sel",{opacity:0},5.23);
+tl.set("#s-res2",{opacity:0},5.23);
+tl.set("#s-b1",{opacity:0},5.23);
+tl.set("#s-b1_ok",{opacity:0},5.23);
+tl.set("#s-b2_ok",{opacity:0},5.23);
+tl.set("#s-b3_ok2",{opacity:0},5.23);
+tl.set("#s-b4",{opacity:0},5.23);
+tl.set("#s-b4_send",{opacity:0},5.23);
+tl.set("#s-b5",{opacity:0},5.23);
+tl.to("#fill",{scaleX:0.3333333333333333,duration:0.5,ease:"power2.inOut"},5.02);
+tl.to("#dot1",{backgroundColor:"#C4623F",borderColor:"#C4623F",scale:1.18,duration:0.3,ease:"back.out(3)"},5.32);
+tl.to("#lab1",{color:"#FBF7F0",duration:0.3},5.32);
+tl.fromTo("#finger0",{x:308,y:576.54,opacity:0,scale:1},{x:238,y:466.54,opacity:1,duration:0.32,ease:"power2.out",immediateRender:false},5.42);
+tl.to("#finger0",{scale:0.78,duration:0.08,yoyo:true,repeat:1,ease:"power1.inOut"},5.78);
+tl.fromTo("#rip0",{x:238,y:466.54,scale:0.2,opacity:0.85},{scale:2.4,opacity:0,duration:0.5,ease:"power2.out",immediateRender:false},5.78);
+tl.to("#finger0",{opacity:0,duration:0.2},6.08);
+tl.set("#s-quiz_q1_sel",{opacity:1},5.83);
+tl.set("#s-res1",{opacity:0},5.84);
+tl.set("#s-hero",{opacity:0},5.84);
+tl.set("#s-quiz_q1",{opacity:0},5.84);
+tl.set("#s-res2",{opacity:0},5.84);
+tl.set("#s-b1",{opacity:0},5.84);
+tl.set("#s-b1_ok",{opacity:0},5.84);
+tl.set("#s-b2_ok",{opacity:0},5.84);
+tl.set("#s-b3_ok2",{opacity:0},5.84);
+tl.set("#s-b4",{opacity:0},5.84);
+tl.set("#s-b4_send",{opacity:0},5.84);
+tl.set("#s-b5",{opacity:0},5.84);
+tl.fromTo("#finger1",{x:440.12,y:805.08,opacity:0,scale:1},{x:370.12,y:695.08,opacity:1,duration:0.32,ease:"power2.out",immediateRender:false},5.79);
+tl.to("#finger1",{scale:0.78,duration:0.08,yoyo:true,repeat:1,ease:"power1.inOut"},6.15);
+tl.fromTo("#rip1",{x:370.12,y:695.08,scale:0.2,opacity:0.85},{scale:2.4,opacity:0,duration:0.5,ease:"power2.out",immediateRender:false},6.15);
+tl.to("#finger1",{opacity:0,duration:0.2},6.45);
+tl.fromTo("#s-res1",{opacity:0},{opacity:1,duration:0.18,ease:"power1.out"},7.28);
+tl.set("#s-hero",{opacity:0},7.47);
+tl.set("#s-quiz_q1",{opacity:0},7.47);
+tl.set("#s-quiz_q1_sel",{opacity:0},7.47);
+tl.set("#s-res2",{opacity:0},7.47);
+tl.set("#s-b1",{opacity:0},7.47);
+tl.set("#s-b1_ok",{opacity:0},7.47);
+tl.set("#s-b2_ok",{opacity:0},7.47);
+tl.set("#s-b3_ok2",{opacity:0},7.47);
+tl.set("#s-b4",{opacity:0},7.47);
+tl.set("#s-b4_send",{opacity:0},7.47);
+tl.set("#s-b5",{opacity:0},7.47);
+tl.set("#ring2",{left:65.23,top:53.03,width:345.54,height:369.95},0);
+tl.fromTo("#ring2",{opacity:0,scale:1.12},{opacity:1,scale:1,duration:0.28,ease:"back.out(2)"},7.81);
+tl.to("#ring2",{opacity:0,duration:0.2},8.45);
+tl.fromTo("#s-res2",{opacity:0},{opacity:1,duration:0.18,ease:"power1.out"},8.5);
+tl.set("#s-res1",{opacity:0},8.69);
+tl.set("#s-hero",{opacity:0},8.69);
+tl.set("#s-quiz_q1",{opacity:0},8.69);
+tl.set("#s-quiz_q1_sel",{opacity:0},8.69);
+tl.set("#s-b1",{opacity:0},8.69);
+tl.set("#s-b1_ok",{opacity:0},8.69);
+tl.set("#s-b2_ok",{opacity:0},8.69);
+tl.set("#s-b3_ok2",{opacity:0},8.69);
+tl.set("#s-b4",{opacity:0},8.69);
+tl.set("#s-b4_send",{opacity:0},8.69);
+tl.set("#s-b5",{opacity:0},8.69);
+tl.set("#ring3",{left:61.69,top:167.88,width:352.74,height:69.7},0);
+tl.fromTo("#ring3",{opacity:0,scale:1.12},{opacity:1,scale:1,duration:0.28,ease:"back.out(2)"},8.65);
+tl.to("#ring3",{opacity:0,duration:0.2},10.04);
+tl.fromTo("#finger2",{x:308.06,y:312.73,opacity:0,scale:1},{x:238.06,y:202.73,opacity:1,duration:0.32,ease:"power2.out",immediateRender:false},9.48);
+tl.to("#finger2",{scale:0.78,duration:0.08,yoyo:true,repeat:1,ease:"power1.inOut"},9.84);
+tl.fromTo("#rip2",{x:238.06,y:202.73,scale:0.2,opacity:0.85},{scale:2.4,opacity:0,duration:0.5,ease:"power2.out",immediateRender:false},9.84);
+tl.to("#finger2",{opacity:0,duration:0.2},10.14);
+tl.fromTo("#s-b1",{opacity:0},{opacity:1,duration:0.2,ease:"power1.out"},9.94);
+tl.set("#s-res1",{opacity:0},10.15);
+tl.set("#s-hero",{opacity:0},10.15);
+tl.set("#s-quiz_q1",{opacity:0},10.15);
+tl.set("#s-quiz_q1_sel",{opacity:0},10.15);
+tl.set("#s-res2",{opacity:0},10.15);
+tl.set("#s-b1_ok",{opacity:0},10.15);
+tl.set("#s-b2_ok",{opacity:0},10.15);
+tl.set("#s-b3_ok2",{opacity:0},10.15);
+tl.set("#s-b4",{opacity:0},10.15);
+tl.set("#s-b4_send",{opacity:0},10.15);
+tl.set("#s-b5",{opacity:0},10.15);
+tl.to("#fill",{scaleX:0.6666666666666666,duration:0.5,ease:"power2.inOut"},9.94);
+tl.to("#dot2",{backgroundColor:"#C4623F",borderColor:"#C4623F",scale:1.18,duration:0.3,ease:"back.out(3)"},10.24);
+tl.to("#lab2",{color:"#FBF7F0",duration:0.3},10.24);
+tl.set("#s-b1_ok",{opacity:1},10.86);
+tl.set("#s-res1",{opacity:0},10.87);
+tl.set("#s-hero",{opacity:0},10.87);
+tl.set("#s-quiz_q1",{opacity:0},10.87);
+tl.set("#s-quiz_q1_sel",{opacity:0},10.87);
+tl.set("#s-res2",{opacity:0},10.87);
+tl.set("#s-b1",{opacity:0},10.87);
+tl.set("#s-b2_ok",{opacity:0},10.87);
+tl.set("#s-b3_ok2",{opacity:0},10.87);
+tl.set("#s-b4",{opacity:0},10.87);
+tl.set("#s-b4_send",{opacity:0},10.87);
+tl.set("#s-b5",{opacity:0},10.87);
+tl.fromTo("#finger3",{x:412.05,y:1092.51,opacity:0,scale:1},{x:342.05,y:982.51,opacity:1,duration:0.32,ease:"power2.out",immediateRender:false},10.9);
+tl.to("#finger3",{scale:0.78,duration:0.08,yoyo:true,repeat:1,ease:"power1.inOut"},11.26);
+tl.fromTo("#rip3",{x:342.05,y:982.51,scale:0.2,opacity:0.85},{scale:2.4,opacity:0,duration:0.5,ease:"power2.out",immediateRender:false},11.26);
+tl.to("#finger3",{opacity:0,duration:0.2},11.56);
+tl.set("#s-b2_ok",{opacity:1},11.58);
+tl.set("#s-res1",{opacity:0},11.59);
+tl.set("#s-hero",{opacity:0},11.59);
+tl.set("#s-quiz_q1",{opacity:0},11.59);
+tl.set("#s-quiz_q1_sel",{opacity:0},11.59);
+tl.set("#s-res2",{opacity:0},11.59);
+tl.set("#s-b1",{opacity:0},11.59);
+tl.set("#s-b1_ok",{opacity:0},11.59);
+tl.set("#s-b3_ok2",{opacity:0},11.59);
+tl.set("#s-b4",{opacity:0},11.59);
+tl.set("#s-b4_send",{opacity:0},11.59);
+tl.set("#s-b5",{opacity:0},11.59);
+tl.fromTo("#finger4",{x:392.76,y:1092.51,opacity:0,scale:1},{x:322.76,y:982.51,opacity:1,duration:0.32,ease:"power2.out",immediateRender:false},11.45);
+tl.to("#finger4",{scale:0.78,duration:0.08,yoyo:true,repeat:1,ease:"power1.inOut"},11.81);
+tl.fromTo("#rip4",{x:322.76,y:982.51,scale:0.2,opacity:0.85},{scale:2.4,opacity:0,duration:0.5,ease:"power2.out",immediateRender:false},11.81);
+tl.to("#finger4",{opacity:0,duration:0.2},12.11);
+tl.set("#s-b3_ok2",{opacity:1},12.03);
+tl.set("#s-res1",{opacity:0},12.04);
+tl.set("#s-hero",{opacity:0},12.04);
+tl.set("#s-quiz_q1",{opacity:0},12.04);
+tl.set("#s-quiz_q1_sel",{opacity:0},12.04);
+tl.set("#s-res2",{opacity:0},12.04);
+tl.set("#s-b1",{opacity:0},12.04);
+tl.set("#s-b1_ok",{opacity:0},12.04);
+tl.set("#s-b2_ok",{opacity:0},12.04);
+tl.set("#s-b4",{opacity:0},12.04);
+tl.set("#s-b4_send",{opacity:0},12.04);
+tl.set("#s-b5",{opacity:0},12.04);
+tl.fromTo("#finger5",{x:414.73,y:1092.51,opacity:0,scale:1},{x:344.73,y:982.51,opacity:1,duration:0.32,ease:"power2.out",immediateRender:false},12.73);
+tl.to("#finger5",{scale:0.78,duration:0.08,yoyo:true,repeat:1,ease:"power1.inOut"},13.09);
+tl.fromTo("#rip5",{x:344.73,y:982.51,scale:0.2,opacity:0.85},{scale:2.4,opacity:0,duration:0.5,ease:"power2.out",immediateRender:false},13.09);
+tl.to("#finger5",{opacity:0,duration:0.2},13.39);
+tl.fromTo("#s-b4",{opacity:0},{opacity:1,duration:0.15,ease:"power1.out"},13.24);
+tl.set("#s-res1",{opacity:0},13.4);
+tl.set("#s-hero",{opacity:0},13.4);
+tl.set("#s-quiz_q1",{opacity:0},13.4);
+tl.set("#s-quiz_q1_sel",{opacity:0},13.4);
+tl.set("#s-res2",{opacity:0},13.4);
+tl.set("#s-b1",{opacity:0},13.4);
+tl.set("#s-b1_ok",{opacity:0},13.4);
+tl.set("#s-b2_ok",{opacity:0},13.4);
+tl.set("#s-b3_ok2",{opacity:0},13.4);
+tl.set("#s-b4_send",{opacity:0},13.4);
+tl.set("#s-b5",{opacity:0},13.4);
+tl.set("#ring4",{left:11.53,top:348.39,width:382.15,height:147.82},0);
+tl.fromTo("#ring4",{opacity:0,scale:1.12},{opacity:1,scale:1,duration:0.28,ease:"back.out(2)"},13.58);
+tl.to("#ring4",{opacity:0,duration:0.2},14.81);
+tl.fromTo("#s-b4_send",{opacity:0},{opacity:1,duration:0.15,ease:"power1.out"},14.86);
+tl.set("#s-res1",{opacity:0},15.02);
+tl.set("#s-hero",{opacity:0},15.02);
+tl.set("#s-quiz_q1",{opacity:0},15.02);
+tl.set("#s-quiz_q1_sel",{opacity:0},15.02);
+tl.set("#s-res2",{opacity:0},15.02);
+tl.set("#s-b1",{opacity:0},15.02);
+tl.set("#s-b1_ok",{opacity:0},15.02);
+tl.set("#s-b2_ok",{opacity:0},15.02);
+tl.set("#s-b3_ok2",{opacity:0},15.02);
+tl.set("#s-b4",{opacity:0},15.02);
+tl.set("#s-b5",{opacity:0},15.02);
+tl.set("#ring5",{left:227.8,top:946.44,width:230.57,height:69.7},0);
+tl.fromTo("#ring5",{opacity:0,scale:1.12},{opacity:1,scale:1,duration:0.28,ease:"back.out(2)"},14.96);
+tl.to("#ring5",{opacity:0,duration:0.2},15.62);
+tl.fromTo("#finger6",{x:413.09,y:1091.29,opacity:0,scale:1},{x:343.09,y:981.29,opacity:1,duration:0.32,ease:"power2.out",immediateRender:false},15.05);
+tl.to("#finger6",{scale:0.78,duration:0.08,yoyo:true,repeat:1,ease:"power1.inOut"},15.41);
+tl.fromTo("#rip6",{x:343.09,y:981.29,scale:0.2,opacity:0.85},{scale:2.4,opacity:0,duration:0.5,ease:"power2.out",immediateRender:false},15.41);
+tl.to("#finger6",{opacity:0,duration:0.2},15.71);
+tl.fromTo("#s-b5",{opacity:0},{opacity:1,duration:0.2,ease:"power1.out"},15.67);
+tl.set("#s-res1",{opacity:0},15.88);
+tl.set("#s-hero",{opacity:0},15.88);
+tl.set("#s-quiz_q1",{opacity:0},15.88);
+tl.set("#s-quiz_q1_sel",{opacity:0},15.88);
+tl.set("#s-res2",{opacity:0},15.88);
+tl.set("#s-b1",{opacity:0},15.88);
+tl.set("#s-b1_ok",{opacity:0},15.88);
+tl.set("#s-b2_ok",{opacity:0},15.88);
+tl.set("#s-b3_ok2",{opacity:0},15.88);
+tl.set("#s-b4",{opacity:0},15.88);
+tl.set("#s-b4_send",{opacity:0},15.88);
+tl.to("#phone",{scale:0.8,y:-70,duration:0.6,ease:"power3.inOut"},16.58);
+tl.to("#phoneDim",{opacity:0.35,duration:0.5},16.88);
+tl.fromTo("#mail",{y:700,opacity:0,rotation:3},{y:0,opacity:1,rotation:0,duration:0.7,ease:"back.out(1.3)"},16.8);
+tl.to("#fill",{scaleX:1,duration:0.5,ease:"power2.inOut"},16.9);
+tl.to("#dot3",{backgroundColor:"#C4623F",borderColor:"#C4623F",scale:1.18,duration:0.3,ease:"back.out(3)"},17.2);
+tl.to("#lab3",{color:"#FBF7F0",duration:0.3},17.2);
+tl.fromTo("#mail tr.pc td",{backgroundColor:"rgba(251,231,220,0)"},{backgroundColor:"rgba(251,231,220,1)",duration:0.35,ease:"power2.out"},17.93);
+tl.to(["#tag1","#tag2"],{opacity:1,y:0,duration:0.35,stagger:0.12},18.13);
+tl.fromTo("#blobA",{x:-60,y:0},{x:80,y:120,duration:24.64,ease:"none"},0);
+tl.fromTo("#blobB",{x:40,y:0},{x:-90,y:-140,duration:24.64,ease:"none"},0);
+    window.__timelines["journey"] = tl;
+  </script>
+</template>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "w0",
+    "text": "Visitors",
+    "start": 0.08,
+    "end": 0.56
+  },
+  {
+    "id": "w1",
+    "text": "take",
+    "start": 0.56,
+    "end": 0.8
+  },
+  {
+    "id": "w2",
+    "text": "a",
+    "start": 0.8,
+    "end": 0.88
+  },
+  {
+    "id": "w3",
+    "text": "two",
+    "start": 0.88,
+    "end": 1.04
+  },
+  {
+    "id": "w4",
+    "text": "minute",
+    "start": 1.12,
+    "end": 1.44
+  },
+  {
+    "id": "w5",
+    "text": "quiz.",
+    "start": 1.44,
+    "end": 1.84
+  }
+]

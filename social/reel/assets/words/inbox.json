@@ -1,0 +1,44 @@
+[
+  {
+    "id": "w0",
+    "text": "Then",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "the",
+    "start": 0.24,
+    "end": 0.32
+  },
+  {
+    "id": "w2",
+    "text": "lead",
+    "start": 0.32,
+    "end": 0.64
+  },
+  {
+    "id": "w3",
+    "text": "lands",
+    "start": 0.64,
+    "end": 0.96
+  },
+  {
+    "id": "w4",
+    "text": "in",
+    "start": 0.96,
+    "end": 1.04
+  },
+  {
+    "id": "w5",
+    "text": "your",
+    "start": 1.04,
+    "end": 1.2
+  },
+  {
+    "id": "w6",
+    "text": "inbox.",
+    "start": 1.2,
+    "end": 1.92
+  }
+]

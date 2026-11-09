@@ -1,0 +1,26 @@
+[
+  {
+    "id": "w0",
+    "text": "Here's",
+    "start": 0,
+    "end": 0.4
+  },
+  {
+    "id": "w1",
+    "text": "how",
+    "start": 0.4,
+    "end": 0.64
+  },
+  {
+    "id": "w2",
+    "text": "it",
+    "start": 0.64,
+    "end": 0.8
+  },
+  {
+    "id": "w3",
+    "text": "works.",
+    "start": 0.8,
+    "end": 1.28
+  }
+]

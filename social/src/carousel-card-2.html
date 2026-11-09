@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset=utf-8><style>
+@font-face{font-family:Fraunces;src:url(../fonts/fraunces.woff2) format('woff2');font-weight:100 900}
+@font-face{font-family:Fraunces;src:url(../fonts/fraunces-italic.woff2) format('woff2');font-weight:100 900;font-style:italic}
+@font-face{font-family:Outfit;src:url(../fonts/outfit.woff2) format('woff2');font-weight:100 900}
+:root{--cream:#FBF7F0;--sage:#2F4A3A;--sage2:#22382B;--terra:#C4623F;--wheat:#F2E6CF;--olive:#7C8B5A;--leaf:#3E8E5E;--ink:#1F2A22}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow:hidden}
+body{background:var(--cream);font-family:Outfit,sans-serif;color:var(--ink);position:relative}
+.serif{font-family:Fraunces,serif}
+em{font-family:Fraunces,serif;font-style:italic;color:var(--terra);font-weight:500}
+.chip{display:inline-flex;align-items:center;gap:14px;font-weight:700;font-size:22px;letter-spacing:.12em;text-transform:uppercase;color:var(--olive)}
+.chip b{background:var(--terra);color:#fff;border-radius:999px;padding:8px 18px;letter-spacing:.06em}
+h1{font-family:Fraunces,serif;font-weight:600;font-size:64px;line-height:1.04;color:var(--sage);letter-spacing:-.01em}
+.sub{font-size:29px;line-height:1.35;color:#46524A;margin-top:18px}
+.phone{position:absolute;padding:11px;border-radius:60px;background:#17241C;box-shadow:0 40px 80px -30px rgba(23,36,28,.55),0 0 0 2px #2c3b31 inset}
+.screen{position:relative;width:100%;aspect-ratio:390/844;border-radius:49px;overflow:hidden;background:#fff}
+.screen img{width:100%;display:block}
+.ring{position:absolute;border:4px solid var(--terra);border-radius:18px;box-shadow:0 0 0 6px rgba(196,98,63,.18)}
+.note{position:absolute;width:440px;font-size:27px;line-height:1.3;color:var(--ink);padding:20px 24px;background:#fff;border-radius:20px;box-shadow:0 12px 30px -14px rgba(31,42,34,.35);border-left:6px solid var(--terra)}
+.note b{display:block;font-weight:700;color:var(--sage);font-size:28px;margin-bottom:4px}
+.foot{position:absolute;left:72px;right:72px;bottom:44px;display:flex;justify-content:space-between;font-size:22px;color:#6b756d;letter-spacing:.02em}
+.foot .swipe{color:var(--terra);font-weight:700}
+svg.lines{position:absolute;inset:0;pointer-events:none}
+</style></head><body>
+<div style="position:absolute;left:72px;top:64px;right:72px">
+  <div class="chip"><b>2 / 7</b>The problem</div>
+  <h1 style="margin-top:26px">Visitors see <em>their own</em> week.</h1>
+  <p class="sub">Pain points written in the client's words, not a sales pitch.</p>
+</div>
+<div class="phone" style="left:72px;top:430px;width:400px"><div class="screen" style="aspect-ratio:390/844"><img src="../shots/sf_open.png" style=""><div class="ring" style="left:3.6923076923076916px;top:32.76923076923077px;width:370.61538461538464px;height:79.84615384615384px"></div><div class="ring" style="left:7.569230769230769px;top:527.0769230769231px;width:362.8615384615385px;height:265.9384615384615px"></div></div></div>
+<svg class="lines" width="1080" height="1350"><path d="M442 518.5384615384615 H502 L528 520" stroke="#C4623F" stroke-width="3" fill="none"/><circle cx="442" cy="518.5384615384615" r="9" fill="#C4623F"/><path d="M442 1085.5384615384614 H502 L528 810" stroke="#C4623F" stroke-width="3" fill="none"/><circle cx="442" cy="1085.5384615384614" r="9" fill="#C4623F"/></svg>
+<div class="note" style="left:542px;top:470px"><b>Speaks to their worries</b>“The quiet ways a small appetite trips people up.”</div><div class="note" style="left:542px;top:760px"><b>Tap to open</b>Each worry explains why it happens and what helps.</div>
+
+<div class="foot"><span>Wrenfield Nutrition · concept website</span><span class="swipe">Swipe →</span></div></body></html>

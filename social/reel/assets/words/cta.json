@@ -1,0 +1,50 @@
+[
+  {
+    "id": "w0",
+    "text": "Want",
+    "start": 0.08,
+    "end": 0.32
+  },
+  {
+    "id": "w1",
+    "text": "a",
+    "start": 0.32,
+    "end": 0.48
+  },
+  {
+    "id": "w2",
+    "text": "site",
+    "start": 0.48,
+    "end": 0.72
+  },
+  {
+    "id": "w3",
+    "text": "like",
+    "start": 0.72,
+    "end": 0.88
+  },
+  {
+    "id": "w4",
+    "text": "this?",
+    "start": 0.88,
+    "end": 1.2
+  },
+  {
+    "id": "w5",
+    "text": "Talk",
+    "start": 1.2,
+    "end": 1.68
+  },
+  {
+    "id": "w6",
+    "text": "Delta",
+    "start": 1.68,
+    "end": 2.16
+  },
+  {
+    "id": "w7",
+    "text": "Web.",
+    "start": 2.16,
+    "end": 2.56
+  }
+]

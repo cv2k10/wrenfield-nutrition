@@ -1,12 +1,12 @@
 # Facebook post — Wrenfield Nutrition concept site
 
-**Attach:** `video/renders/wrenfield-nutrition-presentation.mp4`
+**Best option: Reel + carousel** (both made for phones; see [social/README.md](social/README.md))
+- **Reel:** `social/reel/renders/wrenfield-reel-9x16.mp4` (24.6 s, 9:16, captions work with the sound off).
+- **Carousel, in order:** `social/mockup.png`, then `social/carousel/card-1.png` … `card-7.png` (4:5).
+- **Extra single images** for follow-up posts: `social/lead-flow.png` (square) and `social/before-after.png`.
+- **Pinned comment:** "Try the quiz yourself 👉 https://wrenfield-nutrition.createyourbestsite-cl.workers.dev"
 
-**Or use images (carousel order):**
-1. `screenshot/option-B-desktop-first-fold.png`
-2. `screenshot/option-B-desktop-full-page-3-pages.png`
-3. `screenshot/option-B-mobile-first-fold.png`
-4. `status/funnel-B-plate-check-result-mobile.png`
+**Longer video:** `video/renders/wrenfield-nutrition-presentation.mp4` (1:55, 16:9), better for a page video or YouTube than the feed.
 
 ---
 

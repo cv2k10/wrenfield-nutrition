@@ -1,0 +1,56 @@
+[
+  {
+    "id": "w0",
+    "text": "and",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "get",
+    "start": 0.24,
+    "end": 0.4
+  },
+  {
+    "id": "w2",
+    "text": "a",
+    "start": 0.4,
+    "end": 0.48
+  },
+  {
+    "id": "w3",
+    "text": "score",
+    "start": 0.48,
+    "end": 0.88
+  },
+  {
+    "id": "w4",
+    "text": "with",
+    "start": 0.88,
+    "end": 1.04
+  },
+  {
+    "id": "w5",
+    "text": "a",
+    "start": 1.04,
+    "end": 1.12
+  },
+  {
+    "id": "w6",
+    "text": "plan",
+    "start": 1.12,
+    "end": 1.44
+  },
+  {
+    "id": "w7",
+    "text": "that",
+    "start": 1.44,
+    "end": 1.6
+  },
+  {
+    "id": "w8",
+    "text": "fits.",
+    "start": 1.6,
+    "end": 2.16
+  }
+]
